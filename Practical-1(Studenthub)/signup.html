@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up - Student Hub Portal</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Student Hub Portal</h1>
+  </header>
+
+  <main>
+    <h2>Create Your Account</h2>
+    <form action="./home.html" method="post">
+      <fieldset>
+        <legend>Sign Up</legend>
+
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required autocomplete="new-password"><br><br>
+
+        <label for="confirm-password">Confirm Password:</label>
+        <input type="password" id="confirm-password" name="confirm-password" required><br><br>
+
+        <input type="submit" value="Sign Up">
+      </fieldset>
+    </form>
+    <p><a href="./login.html">Already have an account? Login here</a></p>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Student Hub Portal</p>
+  </footer>
+</body>
+</html>

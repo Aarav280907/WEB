@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings - Student Hub Portal</title>
+  <link rel="stylesheet" href="class.css">
+</head>
+<body>
+  <header>
+    <h1>Student Hub Portal</h1>
+    <nav>
+      <a href="./home.html">Home</a>
+      <a href="./dashboard.html">Dashboard</a>
+      <a href="./profile.html">Profile</a>
+      <a href="./contact.html">Contact Us</a>
+      <a href="./aboutus.html">About Us</a>
+      <a href="./index.html">Logout</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Settings</h2>
+
+    <section class="account-settings">
+      <h3>Account Settings</h3>
+      <ul>
+        <li><a href="./change-password.html">Change Password</a></li>
+        <li><a href="./update-email.html">Update Email/Phone</a></li>
+        <li><a href="./edit-profile.html">Edit Profile Picture</a></li>
+      </ul>
+    </section>
+
+    <section class="preferences">
+      <h3>Preferences</h3>
+      <form>
+        <label for="theme">Theme:</label>
+        <select id="theme" name="theme">
+          <option value="light">Light</option>
+          <option value="dark">Dark</option>
+        </select><br><br>
+
+        <label for="language">Language:</label>
+        <select id="language" name="language">
+          <option value="en">English</option>
+          <option value="hi">Hindi</option>
+        </select><br><br>
+
+        <label>
+          <input type="checkbox" name="notifications" checked> Enable Notifications
+        </label>
+      </form>
+    </section>
+
+    <section class="privacy-security">
+      <h3>Privacy & Security</h3>
+      <p><a href="./twofactor.html">Enable Two-Factor Authentication</a></p>
+      <p><a href="./sessions.html">Manage Login Sessions</a></p>
+      <p><a href="./privacy.html">Data Privacy Information</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Student Hub Portal</p>
+  </footer>
+</body>
+</html>

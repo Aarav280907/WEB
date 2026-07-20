@@ -1,0 +1,22 @@
+.studenthub {
+    width:300px;
+    display: block;
+    margin: 0 auto;
+}
+body {
+  font-family: Verdana, sans-serif;
+  background-color: #fcfbfb;
+  padding: 40px;
+}
+h1 {
+  color: #05225e;
+  text-align: center;
+}
+.pagelist {
+  font-size: 18px;
+  color: #34495e;
+  background: #ecf0f1;
+  padding: 20px;
+  border-radius: 10px;
+  display: inline-block;
+}
