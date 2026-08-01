@@ -1,4 +1,4 @@
-### &#x20;**Structure \& Layout:**
+**Structure \& Layout:**
 
 
 
@@ -42,7 +42,7 @@
 
 
 
-### &#x20;**Content \& Text:**
+**Content \& Text:**
 
 
 
@@ -74,7 +74,7 @@
 
 
 
-### **Links \& Media:**
+**Links \& Media:**
 
 
 
@@ -96,7 +96,6 @@
 
 
 
-&#x20; 
 
 ### **Forms (for student login, feedback, registration):**
 
@@ -126,19 +125,12 @@
 
 <label> → Describes input fields
 
+ **CSS TAGS :**
 
 
 
 
-&#x20;
-
-### **CSS TAGS :**
-
-
-
-
-
-#### **Text \& Fonts**
+ **Text \& Fonts**
 
 
 
@@ -166,9 +158,8 @@
 
 
 
-#### **Backgrounds**
-
-#### 
+ **Backgrounds**
+ 
 
 **background-color → Solid background color**
 
@@ -182,9 +173,8 @@
 
 
 
-#### 
 
-#### **Box \& Layout**
+ **Box \& Layout**
 
 
 
@@ -235,8 +225,7 @@
 
 
 
-
-#### **Buttons \& Links**
+ **Buttons \& Links**
 
 
 
