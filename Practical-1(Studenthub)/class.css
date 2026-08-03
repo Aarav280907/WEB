@@ -92,6 +92,7 @@ main{
   display: block;
   margin-bottom: 5px;
   font-weight: bold;
+  
 }
 
 .auth-container input {
@@ -100,6 +101,7 @@ main{
   margin-bottom: 15px;
   border: 1px solid #ccc;
   border-radius: 6px;
+
 }
 
 .auth-container input:focus {
