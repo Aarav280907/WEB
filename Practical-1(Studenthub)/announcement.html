@@ -5,6 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Announcements</title>
     <style>
+      /* Header Styling */
+header {
+  background: #004080;
+  color: #fff;
+  padding: 15px 20px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 15px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
         /* Announcements Page */
 .auth.messanger {
   max-width: 900px;
@@ -51,26 +78,38 @@
   background: #eef2f7;
 }
 
-    </style>
+ </style>
     
 </head>
 <body>
+
+  <header>
+    <h1>Student Hub Portal</h1>
+    <nav>
+      <a href="./home.html">Home</a>
+      <a href="./dashboard.html">Dashboard</a>
+      <a href="./profile.html">Profile</a>
+      <a href="./contact.html">Contact Us</a>
+      <a href="./settings.html">Settings</a>
+      <a href="./index.html">Logout</a>
+    </nav>
+  </header>
     <div class="auth messanger">
-        <h1>Announcements</h1>
+        <h2>Announcements</h2>
         <div class="announcement-box">
-            <h2>Announcement 1</h2>
+            <h3>Announcement 1</h3>
             <p>This is first announcement.</p>
         </div>
         <div class="announcement-box">
-            <h2>Announcement 2</h2>
+            <h3>Announcement 2</h3>
             <p>This is second announcement.</p>
         </div>
         <div class="announcement-box">
-            <h2>Announcement 3</h2>
+            <h3>Announcement 3</h3>
             <p>This is third announcement.</p>
         </div>
         <div class="announcement-box">
-            <h2>Announcement 4</h2>
+            <h3>Announcement 4</h3>
             <p>This is fourth announcement.</p>
         </div>
     </div>

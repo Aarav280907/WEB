@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exams - Student Hub Portal</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f9;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #004080;
+      color: #fff;
+      padding: 15px 20px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+    nav {
+      margin-top: 10px;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-right: 15px;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .exam-container {
+      max-width: 800px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+      color: #004080;
+      margin-bottom: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    table th, table td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;
+    }
+    table th {
+      background: #004080;
+      color: #fff;
+    }
+    table tr:nth-child(even) {
+      background: #f2f2f2;
+    }
+    footer {
+      background: #004080;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Student Hub Portal</h1>
+    <nav>
+      <a href="./home.html">Home</a>
+      <a href="./dashboard.html">Dashboard</a>
+      <a href="./profile.html">Profile</a>
+      <a href="./contact.html">Contact Us</a>
+      <a href="./settings.html">Settings</a>
+      <a href="./index.html">Logout</a>
+    </nav>
+  </header>
+
+  <div class="exam-container">
+    <h2>Upcoming Exams</h2>
+    <table>
+      <tr>
+        <th>Subject</th>
+        <th>Date</th>
+        <th>Time</th>
+      </tr>
+      <tr>
+        <td>Discrete Mathematics</td>
+        <td>10 August 2026</td>
+        <td>10:00 AM</td>
+      </tr>
+      <tr>
+        <td>Fundamentals of Data Structure and Algorithm</td>
+        <td>12 August 2026</td>
+        <td>2:00 PM</td>
+      </tr>
+      <tr>
+        <td>Fundamentals of Computer Networks</td>
+        <td>14 August 2026</td>
+        <td>9:00 AM</td>
+      </tr>
+      <tr>
+        <td>Web Development Frameworks</td>
+        <td>16 August 2026</td>
+        <td>11:00 AM</td>
+      </tr>
+      <tr>
+        <td>Object Oriented Programming</td>
+        <td>18 August 2026</td>
+        <td>1:00 PM</td>
+      </tr>
+    </table>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Student Hub Portal. All rights reserved.</p>
+  </footer>
+</body>
+</html>

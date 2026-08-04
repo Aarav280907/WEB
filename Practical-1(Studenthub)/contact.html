@@ -5,6 +5,63 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Us - Student Hub Portal</title>
   <link rel="stylesheet" href="class.css">
+  <style>
+    /* Contact Form Styling */
+.contact-form {
+  max-width: 600px;
+  margin: 30px auto;
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.contact-form h3 {
+  color: #004080;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.contact-form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background: #004080;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+  background: #0066cc;
+}
+
+  </style>
 </head>
 <body>
   <header>
@@ -23,4 +80,29 @@
     <h2>Contact Us</h2>
     <section class="contact-info">
       <p><strong>Email:</strong> studenthub@university.edu</p>
-      <p><strong>
+      <p><strong>Phone:</strong> +91 98765 43210</p>
+      <p><strong>Address:</strong> Student Hub Office, University Campus, Petlad, Gujarat, India</p>
+    </section>
+
+    <section class="contact-form">
+      <h3>Send us a message</h3>
+      <form>
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="5" required></textarea><br><br>
+
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Student Hub Portal. All rights reserved.</p>
+  </footer>
+</body>
+</html>
