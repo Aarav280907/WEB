@@ -5,6 +5,78 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Timetable - Student Hub Portal</title>
   <link rel="stylesheet" href="class.css">
+  <style>
+  
+  /* Header Styling */
+header {
+  background: #004080;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 26px;
+}
+
+nav {
+  margin-top: 15px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 12px;
+  font-weight: bold;
+  padding: 8px 12px;
+  transition: background 0.3s, color 0.3s;
+  border-radius: 4px;
+}
+
+nav a:hover {
+  background: rgba(255,255,255,0.15);
+  color: #ffcc00;
+}
+
+    /* Timetable Styling */
+.timetable {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 30px 0;
+  font-size: 16px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.timetable th, .timetable td {
+  border: 1px solid #ccc;
+  padding: 12px;
+}
+
+.timetable th {
+  background: #004080;
+  color: #fff;
+  font-weight: bold;
+}
+
+.timetable tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+.timetable tr:hover {
+  background: #eef2f7;
+  transition: background 0.3s ease;
+}
+
+.timetable td:first-child {
+  font-weight: bold;
+  background: #f2f2f2;
+  color: #004080;
+}
+
+  </style>
 </head>
 <body>
   <header>
@@ -41,3 +113,53 @@
           <td>Maths</td>
           <td>Elective</td>
         </tr>
+        <tr>
+          <td>Tuesday</td>
+          <td>Operating Systems</td>
+          <td>Computer Networks</td>
+          <td>Web Development</td>
+          <td>Elective</td>
+          <td>Maths</td>
+        </tr>
+        <tr>
+          <td>Wednesday</td>
+          <td>Data Structures</td>
+          <td>Database Systems</td>
+          <td>Operating Systems</td>
+          <td>Computer Networks</td>
+          <td>Elective</td>
+        </tr>
+        <tr>
+          <td>Thursday</td>
+          <td>Web Development</td>
+          <td>Maths</td>
+          <td>Database Systems</td>
+          <td>Operating Systems</td>
+          <td>Computer Networks</td>
+        </tr>
+        <tr>
+          <td>Friday</td>
+          <td>Elective</td>
+          <td>Web Development</td>
+          <td>Data Structures</td>
+          <td>Database Systems</td>
+          <td>Maths</td>
+        </tr>
+        <tr>
+          <td>Saturday</td>
+          <td>Computer Networks</td>
+          <td>Operating Systems</td>
+          <td>Elective</td>
+          <td>Web Development</td>
+          <td>Seminar</td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Student Hub Portal. All rights reserved.</p>
+  </footer>
+</body>
+</html>
+
