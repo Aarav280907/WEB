@@ -148,6 +148,52 @@ legend{
   text-decoration: underline;
 }
 
+.content{
+  max-width: 800px;
+    margin: 50px auto;
+    background: #f3f3f4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.content h1{
+   color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.content h2{
+  color: #555;
+    margin-top: 30px;
+}
+.content p{
+  color: #666;
+    line-height: 1.6;
+}
+
+.content ul{
+  list-style-type:square;
+  padding-left:20px;
+}
+.content li{
+ margin:8px 0;
+ color:#444;
+}
+.content button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #004080;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.content button:hover {
+    background-color: #003366;
+}
 table{
   width:100%;
   border-collapse: collapse;

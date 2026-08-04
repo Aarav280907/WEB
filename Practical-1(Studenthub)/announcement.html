@@ -4,7 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Announcements</title>
-    <link rel="stylesheet" type="text/css" href="class.css">
+    <style>
+        /* Announcements Page */
+.auth.messanger {
+  max-width: 900px;
+  margin: 40px auto;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.15);
+}
+
+.auth.messanger h1 {
+  text-align: center;
+  color: #004080;
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+/* Individual Announcement Boxes */
+.announcement-box {
+  background: #f4f6f9;
+  border-left: 6px solid #004080;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.announcement-box h2 {
+  margin-bottom: 10px;
+  color: #2d3748;
+  font-size: 1.3rem;
+}
+
+.announcement-box p {
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Hover Effect */
+.announcement-box:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  background: #eef2f7;
+}
+
+    </style>
+    
 </head>
 <body>
     <div class="auth messanger">
