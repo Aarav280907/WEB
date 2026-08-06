@@ -5,22 +5,22 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 a {
-    color: #af8a40;
+    color: #d97706;
     text-decoration:dashed;
     font-weight: normal;
     transition: color 0.3s ease;
 }
 body {
   
-  background-color: #f4f6f9;
-  color: #2d3748;
+  background-color: #f1f5f9;
+  color: #1e293b;
   line-height: 1.6;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 header.pagelist {
-  background: #004080;
+  background: #065f46;
   align-items: center;
   color: #ffffff;
   padding: 15px 20px;
@@ -71,7 +71,7 @@ main{
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
   text-align: center;
   font-size: 18px;
-  color: #333;
+  color: #334155;
 
 }
 /* Login & Signup Forms */
@@ -87,7 +87,7 @@ main{
 .auth-container h2 {
   text-align: center;
   margin-bottom: 20px;
-  color: #004080;
+  color: #065f46;
 }
 
 .auth-container label {
@@ -107,13 +107,13 @@ main{
 }
 
 .auth-container input:focus {
-  border-color: #004080;
+  border-color: #065f46;
   outline: none;
-  box-shadow: 0 0 5px rgba(0,64,128,0.3);
+  box-shadow: 0 0 5px rgba(6,95,70,0.3);
 }
 
 .auth-container input[type="submit"] {
-  background: #004080;
+  background: #065f46;
   color: #fff;
   font-weight: bold;
   cursor: pointer;
@@ -127,12 +127,12 @@ fieldset{
 }
 legend{
   font-weight: bold;
-  color: #004080;
+  color: #065f46;
   margin-bottom: 10px;
 }
 
 .auth-container input[type="submit"]:hover {
-  background: #003366;
+  background: #064e3b;
 }
 
 .auth-links {
@@ -141,7 +141,7 @@ legend{
 }
 
 .auth-links a {
-  color: #004080;
+  color: #065f46;
   text-decoration: none;
   font-size: 14px;
 }
@@ -162,11 +162,11 @@ table th, table td{
   text-align: center;
 }
 table th{
-  background: #004080;
+  background: #065f46;
   color: #fff;
 }
 table tr:nth-child(even){
-  background: #f2f2f2;
+  background: #ecfdf5;
 }
 
 form{
@@ -190,7 +190,7 @@ form input,form select,form textarea{
   border-radius: 4px;
 }
 form input[type="submit"]:hover,button:hover {
-background: #003366;
+background: #064e3b;
 }
 .dashboard-cards{
   display: grid;
@@ -205,7 +205,7 @@ background: #003366;
   border-radius:8px;
   box-shadow:0 0 8px rgba(0, 0, 0, 0.1);
   font-weight: bold;
-  color: #004080;
+  color: #065f46;
   transition: transform 0.3s;
 }
 .card:hover{
@@ -213,7 +213,7 @@ background: #003366;
 }
 .card a{
   text-decoration:none;
-  color: #004080;
+  color: #065f46;
   font-weight:bold;
 }
 .progress-bar{
@@ -224,7 +224,7 @@ background: #003366;
   margin:10px 0;
 }
 .progress{
-  background:#4caf50;
+  background:#10b981;
   height:100%;
   text-align: right;
   padding-right:5px;
@@ -232,7 +232,7 @@ background: #003366;
   font-size:12px;
 }
 footer {
-  background: #004080;
+  background: #065f46;
   color: #fff;
   text-align: center;
   padding: 15px;

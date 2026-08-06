@@ -6,68 +6,135 @@
   <title>Profile - Student Hub Portal</title>
   <link rel="stylesheet" href="class.css">
   <style>
-    /* Profile Page Styling */
-    .profile-info {
-      max-width: 600px;
-      margin: 30px auto;
-      background: #fff;
-      padding: 25px;
-      border-radius: 10px;
-      box-shadow: 0 0 12px rgba(0,0,0,0.15);
-      text-align: center;
-    }
+    /* General Page Styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f1f5f9;
+  color: #1e293b;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
 
-    .profile-info .profile-pic {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      margin-bottom: 20px;
-      box-shadow: 0 0 8px rgba(0,0,0,0.2);
-    }
+a {
+  color: #d97706;
+  text-decoration: dashed;
+  font-weight: normal;
+  transition: color 0.3s ease;
+}
 
-    .profile-info p {
-      margin: 8px 0;
-      color: #333;
-      font-size: 15px;
-    }
+/* Header */
+header {
+  background: #065f46;
+  color: #fff;
+  padding: 15px 20px;
+}
+header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+nav {
+  margin-top: 10px;
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 15px;
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background 0.25s ease;
+}
+nav a:hover {
+  background: rgba(255, 255, 255, 0.15);
+  text-decoration: none;
+}
 
-    .academic-summary {
-      max-width: 600px;
-      margin: 30px auto;
-      background: #f9f9f9;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 0 8px rgba(0,0,0,0.1);
-    }
+/* Main Content */
+main {
+  max-width: 800px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+main h2 {
+  color: #065f46;
+  text-align: center;
+  margin-bottom: 20px;
+}
 
-    .academic-summary h3 {
-      color: #004080;
-      margin-bottom: 15px;
-    }
+/* Profile Info */
+.profile-info {
+  max-width: 600px;
+  margin: 30px auto;
+  background: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+.profile-info .profile-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+}
+.profile-info p {
+  margin: 8px 0;
+  color: #475569;
+  font-size: 15px;
+}
 
-    .academic-summary p {
-      margin: 8px 0;
-      color: #444;
-      font-size: 15px;
-    }
+/* Academic Summary */
+.academic-summary {
+  max-width: 600px;
+  margin: 30px auto;
+  background: #f9fafb;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+.academic-summary h3 {
+  color: #065f46;
+  margin-bottom: 15px;
+}
+.academic-summary p {
+  margin: 8px 0;
+  color: #334155;
+  font-size: 15px;
+}
 
-    /* Edit Profile Button */
-    button {
-      display: block;
-      margin: 30px auto;
-      padding: 12px 20px;
-      background: #004080;
-      color: #fff;
-      border: none;
-      border-radius: 6px;
-      font-size: 16px;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
+/* Edit Profile Button */
+button {
+  display: block;
+  margin: 30px auto;
+  padding: 12px 20px;
+  background: #065f46;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+button:hover {
+  background: #064e3b;
+}
 
-    button:hover {
-      background: #0066cc;
-    }
+/* Footer */
+footer {
+  background: #065f46;
+  color: #fff;
+  text-align: center;
+  padding: 15px 20px;
+  margin-top: 40px;
+}
+footer p {
+  margin: 0;
+}
   </style>
 </head>
 <body>

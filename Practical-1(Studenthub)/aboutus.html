@@ -1,10 +1,113 @@
 <!DOCTYPE html>
- <body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us</title>
+  <style>
+    /* General Page Styling */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f1f5f9;
+      color: #1e293b;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    a {
+      color: #d97706;
+      text-decoration: dashed;
+      font-weight: normal;
+      transition: color 0.3s ease;
+    }
+
+    /* Header */
+    header {
+      background: #065f46;
+      color: #fff;
+      padding: 15px 20px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+    nav {
+      margin-top: 10px;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-right: 15px;
+      font-weight: bold;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: background 0.25s ease;
+    }
+    nav a:hover {
+      background: rgba(255, 255, 255, 0.15);
+      text-decoration: none;
+    }
+
+    /* Content Section */
+    .content {
+      max-width: 800px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .content h1 {
+      color: #065f46;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .content h2 {
+      color: #1e293b;
+      margin-top: 20px;
+    }
+    .content p {
+      color: #475569;
+      line-height: 1.6;
+    }
+
+    /* Footer */
+    footer {
+      background: #065f46;
+      color: #fff;
+      text-align: center;
+      padding: 15px 20px;
+      margin-top: 40px;
+    }
+    footer h2 {
+      margin: 0 0 10px;
+      font-size: 20px;
+    }
+    footer a {
+      color: #d97706;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
   <header>
     <h1>About Us</h1>
+    <nav>
+      <a href="./home.html">Home</a>
+      <a href="./services.html">Services</a>
+      <a href="./projects.html">Projects</a>
+      <a href="./contact.html">Contact</a>
+      <a href="./index.html">Logout</a>
+    </nav>
   </header>
-  
-  <main>
+
+  <div class="content">
+    <h1>Welcome to Our Page</h1>
     <section>
       <h2>Our Mission</h2>
       <p>Our mission is to make learning simple, fun, and accessible for everyone.</p>
@@ -14,10 +117,13 @@
       <h2>What We Do</h2>
       <p>We create tutorials, projects, and resources to help students understand web development and programming.</p>
     </section>
-  </main>
-  
+  </div>
+
   <footer>
     <h2>Contact Us</h2>
-    <p>You can reach us at: <a href="mailto:25dce072@charusat.edu.in">25dce072@charusat.edu.in</a></p>
+    <p>You can reach us at: 
+      <a href="mailto:25dce072@charusat.edu.in">25dce072@charusat.edu.in</a>
+    </p>
   </footer>
-  </body>
+</body>
+</html>
