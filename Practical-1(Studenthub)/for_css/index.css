@@ -1,0 +1,43 @@
+header.pagelist {
+    background: #065f46;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.studenthub {
+    display: block;
+    width: 140px;
+    margin: 0 auto 20px;
+}
+
+header.pagelist h1 {
+    margin: 0;
+    font-size: 26px;
+}
+
+header.pagelist nav {
+    margin-top: 15px;
+}
+
+header.pagelist nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 12px;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+header.pagelist nav a:hover {
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+}
+
+main {
+    text-align: center;
+    font-size: 18px;
+    color: #334155;
+}

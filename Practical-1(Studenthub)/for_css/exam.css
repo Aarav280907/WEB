@@ -1,0 +1,45 @@
+main {
+  max-width: 900px;
+  margin: 40px auto;
+}
+
+.exam-container {
+  max-width: 800px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.exam-container h2 {
+  text-align: center;
+  color: #065f46;
+  margin-bottom: 20px;
+}
+
+.exam-container table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.exam-container table th,
+.exam-container table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+.exam-container table th {
+  background: #065f46;
+  color: #fff;
+}
+
+.exam-container table tr:nth-child(even) {
+  background: #f9fafb;
+}
+
+.exam-container table tr:hover {
+  background: #e2e8f0;
+}
