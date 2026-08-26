@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Club Cards</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color:white;
+    }
+
+    .club-container {
+      display: flex;
+      justify-content: space-around;
+      margin: 30px;
+    }
+
+    .club-card {
+      background:white;
+      border: 2px solid white;
+      border-radius: 10px;
+      width: 280px;
+      padding: 15px;
+      margin: 10px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .club-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .club-card img {
+      width: 100%;
+      height: 160px;
+      border-radius: 8px;
+    }
+
+    .club-title {
+      font-size: 20px;
+      font-weight: bold;
+      margin: 10px 0;
+      color: blue;
+    }
+
+    .club-desc {
+      font-size: 14px;
+      margin: 10px 0;
+      color: blue;
+    }
+
+    .details {
+      padding: 8px 15px;
+      background:green;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .details:hover {
+      background: green;
+    }
+    footer {
+            background: green;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40%;
+        }
+        footer p{
+            margin: 0;
+        }
+    
+  </style>
+</head>
+<body>
+  <div class="club-container">
+    <div class="club-card">
+      <img src="" alt="Technical Club">
+      <h2 class="club-title">Technical Club</h2>
+      <p class="club-desc">Description about technical club</p>
+      <button class="details">View Details</button>
+    </div>
+
+    <div class="club-card">
+      <img src="" alt="Coding Club">
+      <h2 class="club-title">Coding Club</h2>
+      <p class="club-desc">Description about coding club</p>
+      <button class="details">View Details</button>
+    </div>
+
+    <div class="club-card">
+      <img src="" alt="Robotics Club">
+      <h2 class="club-title">Robotics Club</h2>
+      <p class="club-desc">Description about robotics</p>
+      <button class="details">View Details</button>
+    </div>
+  </div>
+  <footer>
+    <p>&copy;CHARUSAT,ANAND
+            College Club Activities-2026
+        </p>
+  </footer>
+</body>
+</html>
