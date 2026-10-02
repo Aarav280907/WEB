@@ -3,63 +3,222 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fees - Student Hub Portal</title>
+  <title>Academic Fees & Payments - StudentHub Portal</title>
+  <link rel="icon" type="image/svg+xml" href="../for_css/extra/favicon.svg">
   <link rel="stylesheet" href="../for_css/common.css">
-  <link rel="stylesheet" href="../for_css /fees.css">
+  <link rel="stylesheet" href="../for_css/fees.css">
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
   <header>
-    <h1>Student Hub Portal</h1>
-    <nav>
-      <a href="./home.html">Home</a>
-      <a href="./dashboard.html">Dashboard</a>
-      <a href="./profile.html">Profile</a>
-      <a href="./contact.html">Contact Us</a>
-      <a href="./settings.html">Settings</a>
-      <a href="./index.html">Logout</a>
-    </nav>
+    <div class="header-inner">
+      <a href="./home.html" class="header-brand-link" aria-label="StudentHub Home">
+        <img src="../for_css/extra/logo.svg" alt="StudentHub Logo" class="portal-logo">
+      </a>
+      
+      <div class="header-actions">
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark/light theme" title="Toggle Theme">
+          <span class="theme-icon" id="theme-icon">🌙</span>
+          <span class="theme-text" id="theme-text">Dark</span>
+        </button>
+
+        <button id="hamburger-btn" class="hamburger-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="header-inner" style="padding-top: 0; padding-bottom: 8px;">
+      <nav aria-label="Primary Navigation">
+        <a href="./home.html">🏠 Home</a>
+        <a href="./dashboard.html">📊 Dashboard</a>
+        <a href="./attendance.html">📈 Attendance</a>
+        <a href="./timetable.html">🗓️ Timetable</a>
+        <a href="./fees.html" class="active">💳 Fees</a>
+        <a href="./announcement.html">📢 Announcements</a>
+        <a href="./assignment.html">📝 Assignments</a>
+        <a href="./exam.html">📅 Exams</a>
+        <a href="./profile.html">👤 Profile</a>
+        <a href="./aboutus.html">ℹ️ About Us</a>
+        <a href="./contact.html">📞 Contact</a>
+        <a href="./settings.html">⚙️ Settings</a>
+        <a href="./index.html">🚪 Logout</a>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <h2>Fees Details</h2>
-    <section class="fees-summary">
-      <p><strong>Total Fees:</strong> ₹70,000</p>
-      <p><strong>Paid:</strong> ₹40,000</p>
-      <p><strong>Balance:</strong> ₹30,000</p>
-      <p><strong>Next Due Date:</strong> 30 August 2026</p>
+  <main id="main-content" class="fees-main">
+    <div class="portal-page-header">
+      <div class="header-info">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="./home.html">Home</a>
+          <span class="breadcrumb-separator">/</span>
+          <span>Fees & Payments</span>
+        </nav>
+        <h2>💳 Academic Fees Details</h2>
+        <p>Annual tuition fee breakdown, installment status, and official payment receipts.</p>
+      </div>
+
+      <div class="header-actions">
+        <button class="btn btn-primary" onclick="alert('Payment gateway redirect simulation: NetBanking / UPI portal');">
+          💳 Pay Pending Dues Online
+        </button>
+      </div>
+    </div>
+
+    <!-- Fee Financial Overview Stat Cards -->
+    <section class="card-grid">
+      <div class="stat-card">
+        <div class="stat-icon-wrapper">💰</div>
+        <div class="stat-content">
+          <span class="stat-value">₹70,000</span>
+          <span class="stat-label">Total Annual Tuition Fee</span>
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon-wrapper">✅</div>
+        <div class="stat-content">
+          <span class="stat-value">₹40,000</span>
+          <span class="stat-label">Total Paid to Date</span>
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon-wrapper accent">⚠️</div>
+        <div class="stat-content">
+          <span class="stat-value">₹30,000</span>
+          <span class="stat-label">Current Outstanding Balance</span>
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon-wrapper">📅</div>
+        <div class="stat-content">
+          <span class="stat-value" style="font-size: 1.3rem;">30 Aug 2026</span>
+          <span class="stat-label">Next Payment Due Date</span>
+        </div>
+      </div>
     </section>
 
-    <section class="payment-history">
-      <h3>Payment History</h3>
-      <table>
-        <thead>
-          <tr>
-            <th>Date</th>
-            <th>Amount</th>
-            <th>Mode</th>
-            <th>Status</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>01 Jan 2026</td>
-            <td>₹40,000</td>
-            <td>Online</td>
-            <td>Paid</td>
-          </tr>
-          <tr>
-            <td>30 Aug 2026</td>
-            <td>₹30,000</td>
-            <td>Offline</td>
-            <td>Due</td>
-          </tr>
-        </tbody>
-      </table>
+    <!-- Fee Progress & Clearance Card -->
+    <section class="card fee-progress-card">
+      <div class="card-header">
+        <div class="card-title">
+          <span>📊</span> Fee Payment Clearance
+        </div>
+        <span class="badge badge-warning">57% Cleared</span>
+      </div>
+
+      <p>Term 1 fee of ₹40,000 has been verified. The remaining Term 2 installment of ₹30,000 is due by <strong>30 August 2026</strong>.</p>
+      
+      <div class="progress-bar-large">
+        <div class="progress" style="width: 57.1%;">₹40,000 Paid (57.1%)</div>
+      </div>
+
+      <div class="fee-scale">
+        <span>₹0 (Start)</span>
+        <span style="color: var(--success); font-weight: 700;">₹40,000 (Current Paid)</span>
+        <span>₹70,000 (Full Total)</span>
+      </div>
+    </section>
+
+    <!-- Payment Transaction History Table -->
+    <section class="card">
+      <div class="card-header">
+        <div class="card-title">
+          <span>📜</span> Payment Transaction History
+        </div>
+      </div>
+
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Installment Title</th>
+              <th>Amount</th>
+              <th>Payment Mode</th>
+              <th>Status</th>
+              <th>Receipt</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>01 Jan 2026</strong></td>
+              <td>Semester 3 Term 1 Tuition Fee</td>
+              <td><strong>₹40,000</strong></td>
+              <td>Online NetBanking (HDFC Bank)</td>
+              <td><span class="badge badge-success">Paid</span></td>
+              <td><a href="#" onclick="alert('Downloading official payment receipt PDF...'); return false;" class="btn btn-sm btn-outline">📄 Download</a></td>
+            </tr>
+            <tr>
+              <td><strong>30 Aug 2026</strong></td>
+              <td>Semester 3 Term 2 Tuition Fee</td>
+              <td><strong>₹30,000</strong></td>
+              <td>Online / UPI / Demand Draft</td>
+              <td><span class="badge badge-warning">Pending Due</span></td>
+              <td><span class="badge badge-neutral">Not Issued</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2026 Student Hub Portal. All rights reserved.</p>
+  <footer class="portal-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <h4><img src="../for_css/extra/favicon.svg" alt="" style="height: 24px; width: 24px; display: inline-block; vertical-align: middle;"> StudentHub</h4>
+        <p>Charotar University of Science and Technology (CHARUSAT) — Smart digital student academic portal.</p>
+      </div>
+
+      <div class="footer-col">
+        <h5>Navigation</h5>
+        <ul>
+          <li><a href="./home.html">Home</a></li>
+          <li><a href="./dashboard.html">Dashboard</a></li>
+          <li><a href="./attendance.html">Attendance</a></li>
+          <li><a href="./timetable.html">Timetable</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Academics</h5>
+        <ul>
+          <li><a href="./fees.html">Fees Status</a></li>
+          <li><a href="./announcement.html">Announcements</a></li>
+          <li><a href="./assignment.html">Assignments</a></li>
+          <li><a href="./exam.html">Exams</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Student Support</h5>
+        <ul>
+          <li><a href="./profile.html">Student Profile</a></li>
+          <li><a href="./aboutus.html">About Portal</a></li>
+          <li><a href="./contact.html">Contact Us</a></li>
+          <li><a href="./settings.html">Settings</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 StudentHub Portal. All rights reserved.</p>
+      <p>Department of Computer Engineering | CHARUSAT</p>
+    </div>
   </footer>
+
+  <script src="../javascript/theme.js"></script>
+  <script src="../javascript/navigation.js"></script>
+  <script src="../javascript/notification.js"></script>
+  <script src="../javascript/faq.js"></script>
+  <script src="../javascript/modal.js"></script>
+  <script src="../javascript/slider.js"></script>
+  <script src="../javascript/main.js"></script>
 </body>
 </html>

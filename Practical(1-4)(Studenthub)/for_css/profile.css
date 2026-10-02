@@ -1,69 +1,144 @@
-footer {
-  background: #065f46;
-  color: #fff;
-  text-align: center;
-  padding: 15px;
-  margin-top: 40px;
+/* ==========================================================================
+   StudentHub - Profile Page Styles
+   ========================================================================== */
+
+.profile-main {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
 }
 
-footer p {
-  margin: 0;
-}
-main {
-  max-width: 800px;
-  margin: 40px auto;
-  background: #fff;
-  padding: 25px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+.profile-layout-grid {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 24px;
+    align-items: start;
 }
 
-main h2 {
-  color: #065f46;
-  text-align: center;
-  margin-bottom: 20px;
+/* Avatar Card */
+.profile-avatar-card {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px 20px;
 }
 
-.profile-info {
-  max-width: 600px;
-  margin: 30px auto;
-  background: #fff;
-  padding: 25px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  text-align: center;
+.avatar-wrap {
+    position: relative;
+    width: 130px;
+    height: 130px;
+    margin: 0 auto 16px;
 }
 
-.profile-info .profile-pic {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  margin-bottom: 20px;
-  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+.profile-pic {
+    width: 100%;
+    height: 100%;
+    border-radius: var(--radius-full);
+    object-fit: cover;
+    border: 4px solid var(--primary);
+    box-shadow: var(--shadow-md);
 }
 
-.profile-info p {
-  margin: 8px 0;
-  color: #475569;
-  font-size: 15px;
+.verified-badge {
+    position: absolute;
+    bottom: 4px;
+    right: 4px;
+    background: var(--success);
+    color: #ffffff;
+    width: 28px;
+    height: 28px;
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    font-weight: 800;
+    border: 2px solid var(--bg-surface);
 }
 
-.academic-summary {
-  max-width: 600px;
-  margin: 30px auto;
-  background: #f9fafb;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+.profile-avatar-card h3 {
+    font-size: 1.15rem;
+    margin-bottom: 4px;
+    color: var(--text-main);
 }
 
-.academic-summary h3 {
-  color: #065f46;
-  margin-bottom: 15px;
+.student-id-tag {
+    font-size: 0.9rem;
+    color: var(--text-muted);
 }
 
-.academic-summary p {
-  margin: 8px 0;
-  color: #334155;
-  font-size: 15px;
+.profile-quick-stats {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+}
+
+.p-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.p-num {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--primary);
+}
+
+body.dark-theme .p-num {
+    color: var(--primary-light);
+}
+
+.p-lbl {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-faint);
+    text-transform: uppercase;
+}
+
+/* Details Column */
+.profile-details-column {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 18px;
+}
+
+.detail-item {
+    background: var(--bg-subsurface);
+    padding: 14px 18px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.detail-label {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--text-faint);
+    letter-spacing: 0.04em;
+}
+
+.detail-value {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+@media (max-width: 860px) {
+    .profile-layout-grid {
+        grid-template-columns: 1fr;
+    }
 }

@@ -3,26 +3,123 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>StudentHub</title>
+  <title>Welcome to StudentHub - Your Smart Student Portal</title>
+  <link rel="icon" type="image/svg+xml" href="../for_css/extra/favicon.svg">
   <link rel="stylesheet" href="../for_css/common.css">
   <link rel="stylesheet" href="../for_css/index.css">
 </head>
 <body>
-  <header class="pagelist">
-    <img src="../for_css/extra/studenthub.png" class="studenthub" alt="StudentHub Logo">
-    <h1>Welcome to StudentHub</h1>
-    <nav>
-      <a href="./login.html">Login</a>
-      <a href="./signup.html">Sign Up</a>
-    </nav>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header>
+    <div class="header-inner">
+      <a href="./index.html" class="header-brand-link" aria-label="StudentHub Portal">
+        <img src="../for_css/extra/logo.svg" alt="StudentHub Logo" class="portal-logo">
+      </a>
+      
+      <div class="header-actions">
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark/light theme" title="Toggle Theme">
+          <span class="theme-icon" id="theme-icon">🌙</span>
+          <span class="theme-text" id="theme-text">Dark</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="header-inner" style="padding-top: 0; padding-bottom: 8px;">
+      <nav aria-label="Primary Navigation">
+        <a href="./login.html" class="active">🔑 Student Login</a>
+        <a href="./signup.html">📝 Create Account</a>
+        <a href="./home.html">🚀 Browse Portal Demo</a>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <p>Your one-stop portal for attendance, timetables, fees, announcements, assignments, and more.</p>
+  <main id="main-content" class="landing-main">
+    <!-- Landing Hero Section -->
+    <section class="landing-hero">
+      <img src="../for_css/extra/logo.svg" alt="StudentHub Logo" class="landing-hero-logo">
+      <span class="badge badge-success">Charotar University of Science & Technology</span>
+      <h1>Your Smart Academic Student Portal</h1>
+      <p class="landing-subtitle">One unified digital gateway for live attendance records, weekly timetables, tuition fee payments, examination results, and verified circulars.</p>
+
+      <div class="landing-cta-buttons">
+        <a href="./login.html" class="btn btn-primary btn-lg">🔑 Student Login</a>
+        <a href="./signup.html" class="btn btn-secondary btn-lg">📝 Create Account</a>
+        <a href="./home.html" class="btn btn-outline btn-lg">🚀 Explore Dashboard Demo &rarr;</a>
+      </div>
+    </section>
+
+    <!-- Key Platform Capabilities Grid -->
+    <section class="landing-features-grid">
+      <div class="feature-card">
+        <div class="feat-icon">📊</div>
+        <h3>Live Attendance Tracking</h3>
+        <p>Monitor real-time lecture attendance percentages and receive automated cutoff warnings.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feat-icon">🗓️</div>
+        <h3>Class Timetables</h3>
+        <p>Access weekly room schedules, lab sessions, and elective classroom slots.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feat-icon">💳</div>
+        <h3>Fees & Receipts</h3>
+        <p>Track tuition fee installments, pending dues, and download official payment receipts.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feat-icon">📢</div>
+        <h3>Verified Announcements</h3>
+        <p>Official circulars from the Dean of Academic Affairs and Department Heads.</p>
+      </div>
+    </section>
   </main>
 
-  <footer>
-    <p>&copy; 2026 Student Hub Portal</p>
+  <footer class="portal-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <h4><img src="../for_css/extra/favicon.svg" alt="" style="height: 24px; width: 24px; display: inline-block; vertical-align: middle;"> StudentHub</h4>
+        <p>Charotar University of Science and Technology (CHARUSAT) — Smart digital student academic portal.</p>
+      </div>
+
+      <div class="footer-col">
+        <h5>Quick Access</h5>
+        <ul>
+          <li><a href="./login.html">Student Login</a></li>
+          <li><a href="./signup.html">Student Registration</a></li>
+          <li><a href="./home.html">Explore Portal Demo</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>About CHARUSAT</h5>
+        <ul>
+          <li><a href="./aboutus.html">About Portal</a></li>
+          <li><a href="./contact.html">Contact Us</a></li>
+          <li><a href="./settings.html">Theme Settings</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Academic Info</h5>
+        <p style="font-size: 0.85rem; color: var(--text-muted);">Faculty of Technology & Engineering (FTE)<br>Department of Computer Engineering</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 StudentHub Portal. All rights reserved.</p>
+      <p>CHARUSAT Web Development Frameworks (ITUE203)</p>
+    </div>
   </footer>
+
+  <script src="../javascript/theme.js"></script>
+  <script src="../javascript/navigation.js"></script>
+  <script src="../javascript/notification.js"></script>
+  <script src="../javascript/faq.js"></script>
+  <script src="../javascript/modal.js"></script>
+  <script src="../javascript/slider.js"></script>
+  <script src="../javascript/main.js"></script>
 </body>
 </html>

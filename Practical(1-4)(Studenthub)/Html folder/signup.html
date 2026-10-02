@@ -3,45 +3,86 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sign Up - Student Hub Portal</title>
+  <title>Student Registration - StudentHub Portal</title>
+  <link rel="icon" type="image/svg+xml" href="../for_css/extra/favicon.svg">
   <link rel="stylesheet" href="../for_css/common.css">
   <link rel="stylesheet" href="../for_css/signup.css">
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
   <header>
-    <h1>Student Hub Portal</h1>
+    <div class="header-inner">
+      <a href="./home.html" class="header-brand-link" aria-label="StudentHub Home">
+        <img src="../for_css/extra/logo.svg" alt="StudentHub Logo" class="portal-logo">
+      </a>
+      
+      <div class="header-actions">
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark/light theme" title="Toggle Theme">
+          <span class="theme-icon" id="theme-icon">🌙</span>
+          <span class="theme-text" id="theme-text">Dark</span>
+        </button>
+      </div>
+    </div>
   </header>
 
-  <main>
-    <div class="auth-container">
-    <h2>Create Your Account</h2>
-    <form action="./home.html" method="post">
-      <fieldset>
-        <legend>Sign Up</legend>
+  <main id="main-content" class="auth-main">
+    <div class="auth-card">
+      <div class="auth-header">
+        <img src="../for_css/extra/logo.svg" alt="StudentHub Logo" class="auth-logo">
+        <h2>Create Student Account</h2>
+        <p>Register with your university roll number to access the student portal</p>
+      </div>
 
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required><br><br>
+      <form action="./home.html" method="get" class="auth-form">
+        <fieldset style="border: none; padding: 0; margin: 0;">
+          <legend style="display: none;">Student Registration</legend>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required><br><br>
+          <div class="form-group">
+            <label for="username">Student ID / Roll Number:</label>
+            <input type="text" id="username" name="username" required placeholder="e.g. 25DCE072" autocomplete="username">
+          </div>
 
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required autocomplete="new-password"><br><br>
+          <div class="form-group">
+            <label for="email">University Email Address:</label>
+            <input type="email" id="email" name="email" required placeholder="e.g. yourname@charusat.edu.in" autocomplete="email">
+          </div>
 
-        <label for="confirm-password">Confirm Password:</label>
-        <input type="password" id="confirm-password" name="confirm-password" required><br><br>
+          <div class="form-group">
+            <label for="password">Create Password:</label>
+            <input type="password" id="password" name="password" required autocomplete="new-password" placeholder="Minimum 8 characters">
+          </div>
 
-        <input type="submit" value="Sign Up">
-      </fieldset>
-    </form>
-    <div class="auth-links">
-    <p><a href="./login.html">Already have an account? Login here</a></p>
-    </div>
+          <div class="form-group">
+            <label for="confirm-password">Confirm Password:</label>
+            <input type="password" id="confirm-password" name="confirm-password" required placeholder="Re-enter password to match">
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%; padding: 12px; font-size: 1rem; margin-top: 10px;">
+            📝 Complete Registration
+          </button>
+        </fieldset>
+      </form>
+
+      <div class="auth-footer-links">
+        <p>Already registered? <a href="./login.html">Sign in to your account here &rarr;</a></p>
+        <p style="margin-top: 6px;"><a href="./home.html">Or browse Guest Portal Demo &rarr;</a></p>
+      </div>
     </div>
   </main>
 
-  <footer>
-    <p>&copy; 2026 Student Hub Portal</p>
+  <footer class="portal-footer">
+    <div class="footer-bottom" style="border-top: none; padding: 0; justify-content: center; text-align: center;">
+      <p>&copy; 2026 StudentHub Portal — Charotar University of Science and Technology (CHARUSAT)</p>
+    </div>
   </footer>
+
+  <script src="../javascript/theme.js"></script>
+  <script src="../javascript/navigation.js"></script>
+  <script src="../javascript/notification.js"></script>
+  <script src="../javascript/faq.js"></script>
+  <script src="../javascript/modal.js"></script>
+  <script src="../javascript/slider.js"></script>
+  <script src="../javascript/main.js"></script>
 </body>
 </html>

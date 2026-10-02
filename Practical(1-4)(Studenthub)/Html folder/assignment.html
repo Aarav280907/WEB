@@ -1,42 +1,265 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assignment</title>
-    <link rel="stylesheet" href="../for_css/common.css">
-    <link rel="stylesheet" href="../for_css/assignment.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignments & Practicals - StudentHub Portal</title>
+  <link rel="icon" type="image/svg+xml" href="../for_css/extra/favicon.svg">
+  <link rel="stylesheet" href="../for_css/common.css">
+  <link rel="stylesheet" href="../for_css/assignment.css">
 </head>
 <body>
-    <header>
-    <h1>Student Hub Portal</h1>
-    <nav>
-      <a href="./home.html">Home</a>
-      <a href="./dashboard.html">Dashboard</a>
-      <a href="./profile.html">Profile</a>
-      <a href="./contact.html">Contact Us</a>
-      <a href="./settings.html">Settings</a>
-      <a href="./index.html">Logout</a>
-    </nav>
-  </header>
-    <div class="content">
-    <h1>Welcome to My Assignment</h1>
-    <p>This is a sample webpage created for practice. It includes basic HTML elements styled with CSS.</p>
-    
-    <h2>Topics Covered</h2>
-    <ul>
-        <li>HTML Structure</li>
-        <li>CSS Styling</li>
-        <li>Lists and Buttons</li>
-    </ul>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <button>Click Me</button>
+  <header>
+    <div class="header-inner">
+      <a href="./home.html" class="header-brand-link" aria-label="StudentHub Home">
+        <img src="../for_css/extra/logo.svg" alt="StudentHub Logo" class="portal-logo">
+      </a>
+      
+      <div class="header-actions">
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark/light theme" title="Toggle Theme">
+          <span class="theme-icon" id="theme-icon">🌙</span>
+          <span class="theme-text" id="theme-text">Dark</span>
+        </button>
+
+        <button id="hamburger-btn" class="hamburger-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
     </div>
-  <footer>
-    <h2>Contact Us</h2>
-    <p>You can reach us at: 
-      <a href="mailto:25dce072@charusat.edu.in">25dce072@charusat.edu.in</a>
-    </p>
+
+    <div class="header-inner" style="padding-top: 0; padding-bottom: 8px;">
+      <nav aria-label="Primary Navigation">
+        <a href="./home.html">🏠 Home</a>
+        <a href="./dashboard.html">📊 Dashboard</a>
+        <a href="./attendance.html">📈 Attendance</a>
+        <a href="./timetable.html">🗓️ Timetable</a>
+        <a href="./fees.html">💳 Fees</a>
+        <a href="./announcement.html">📢 Announcements</a>
+        <a href="./assignment.html" class="active">📝 Assignments</a>
+        <a href="./exam.html">📅 Exams</a>
+        <a href="./profile.html">👤 Profile</a>
+        <a href="./aboutus.html">ℹ️ About Us</a>
+        <a href="./contact.html">📞 Contact</a>
+        <a href="./settings.html">⚙️ Settings</a>
+        <a href="./index.html">🚪 Logout</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="assignment-main">
+    <div class="portal-page-header">
+      <div class="header-info">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="./home.html">Home</a>
+          <span class="breadcrumb-separator">/</span>
+          <span>Assignments</span>
+        </nav>
+        <h2>📝 Academic Assignments & Practicals</h2>
+        <p>Web Development Frameworks (ITUE203) — Lab Practical Coursework & Submissions.</p>
+      </div>
+
+      <div class="header-actions">
+        <button class="btn btn-primary open-modal-btn" data-modal-target="assignment-modal">
+          📤 View Submission Guidelines
+        </button>
+      </div>
+    </div>
+
+    <!-- Assignment Summary Metric Cards -->
+    <section class="card-grid">
+      <div class="stat-card">
+        <div class="stat-icon-wrapper">📚</div>
+        <div class="stat-content">
+          <span class="stat-value">4</span>
+          <span class="stat-label">Assigned Practicals</span>
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon-wrapper">✅</div>
+        <div class="stat-content">
+          <span class="stat-value">4</span>
+          <span class="stat-label">Completed & Ready</span>
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon-wrapper accent">⭐</div>
+        <div class="stat-content">
+          <span class="stat-value">100%</span>
+          <span class="stat-label">Submission Rate</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Practical Assignment List Cards -->
+    <section class="assignment-cards-list">
+      <!-- Practical 1 -->
+      <div class="card assignment-card">
+        <div class="assignment-header-row">
+          <div class="assignment-title-wrap">
+            <span class="practical-num-badge">P1</span>
+            <div>
+              <h3>Practical 1: Project Initiation, Sitemap, Wireframe & Setup</h3>
+              <span class="course-name">Web Development Frameworks (ITUE203) | Semester 3</span>
+            </div>
+          </div>
+          <span class="badge badge-success">Completed</span>
+        </div>
+
+        <p>Scope identification, user roles, site navigation sitemap, Figma low-fidelity wireframes, and GitHub repository project structure.</p>
+        
+        <div class="assignment-footer-meta">
+          <span>📅 Due: <strong>10 July 2026</strong></span>
+          <span>📁 Files: <strong>Sitemap.docx, Wireframes</strong></span>
+          <span>🏆 Grade: <strong style="color: var(--success);">Verified (A+)</strong></span>
+        </div>
+      </div>
+
+      <!-- Practical 2 -->
+      <div class="card assignment-card">
+        <div class="assignment-header-row">
+          <div class="assignment-title-wrap">
+            <span class="practical-num-badge">P2</span>
+            <div>
+              <h3>Practical 2: Semantic HTML5 Pages with Accessibility</h3>
+              <span class="course-name">Web Development Frameworks (ITUE203) | Semester 3</span>
+            </div>
+          </div>
+          <span class="badge badge-success">Completed</span>
+        </div>
+
+        <p>Developed static HTML5 skeletons for at least 10 StudentHub portal pages utilizing semantic elements (<code>header, nav, main, section, footer</code>) and ARIA accessibility readiness.</p>
+        
+        <div class="assignment-footer-meta">
+          <span>📅 Due: <strong>15 July 2026</strong></span>
+          <span>📁 Files: <strong>15 HTML Pages</strong></span>
+          <span>🏆 Grade: <strong style="color: var(--success);">Verified (A+)</strong></span>
+        </div>
+      </div>
+
+      <!-- Practical 3 -->
+      <div class="card assignment-card">
+        <div class="assignment-header-row">
+          <div class="assignment-title-wrap">
+            <span class="practical-num-badge">P3</span>
+            <div>
+              <h3>Practical 3: Responsive UI Design using CSS Grid & Flexbox</h3>
+              <span class="course-name">Web Development Frameworks (ITUE203) | Semester 3</span>
+            </div>
+          </div>
+          <span class="badge badge-success">Completed</span>
+        </div>
+
+        <p>Responsive multi-device layout architecture, custom CSS Grid cards, Flexbox navigation bars, readable typography, and fluid mobile-first media queries.</p>
+        
+        <div class="assignment-footer-meta">
+          <span>📅 Due: <strong>20 July 2026</strong></span>
+          <span>📁 Files: <strong>16 CSS Stylesheets</strong></span>
+          <span>🏆 Grade: <strong style="color: var(--success);">Verified (A+)</strong></span>
+        </div>
+      </div>
+
+      <!-- Practical 4 -->
+      <div class="card assignment-card" style="border-left: 4px solid var(--primary);">
+        <div class="assignment-header-row">
+          <div class="assignment-title-wrap">
+            <span class="practical-num-badge" style="background: var(--primary); color: #fff;">P4</span>
+            <div>
+              <h3>Practical 4: JavaScript DOM Manipulation, Event Handling & UI Interactivity</h3>
+              <span class="course-name">Web Development Frameworks (ITUE203) | Semester 3</span>
+            </div>
+          </div>
+          <span class="badge badge-success">Fully Integrated</span>
+        </div>
+
+        <p>Dynamic interactive components including collapsible FAQ accordion, modal dialogs with backdrop/Esc key, content slider with auto-play, top notification banner, mobile hamburger menu, and Light/Dark theme switcher with <code>localStorage</code> persistence.</p>
+        
+        <div class="assignment-footer-meta">
+          <span>📅 Due: <strong>25 July 2026</strong></span>
+          <span>📁 Files: <strong>7 JS Modules in javascript/</strong></span>
+          <span>🏆 Status: <strong style="color: var(--primary);">Ready for Viva Demonstration</strong></span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal Component -->
+  <div id="assignment-modal" class="modal-backdrop" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 id="modal-title">📝 Assignment Submission Rules & Viva Checklist</h3>
+        <button class="modal-close-btn" id="modal-close-btn" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Department of Computer Engineering Submission Guidelines:</strong></p>
+        <ul>
+          <li><strong>GitHub Repository:</strong> Maintain clean commits for Practicals 1, 2, 3, and 4.</li>
+          <li><strong>Zero Console Errors:</strong> Ensure all JavaScript modules execute smoothly on all 15 HTML pages without errors.</li>
+          <li><strong>Responsive Design:</strong> Test mobile view (375px), tablet (768px), and desktop (1200px) responsiveness.</li>
+          <li><strong>localStorage:</strong> Ensure dark mode selection persists across page refresh.</li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-modal-close>Understood</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="portal-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <h4><img src="../for_css/extra/favicon.svg" alt="" style="height: 24px; width: 24px; display: inline-block; vertical-align: middle;"> StudentHub</h4>
+        <p>Charotar University of Science and Technology (CHARUSAT) — Smart digital student academic portal.</p>
+      </div>
+
+      <div class="footer-col">
+        <h5>Navigation</h5>
+        <ul>
+          <li><a href="./home.html">Home</a></li>
+          <li><a href="./dashboard.html">Dashboard</a></li>
+          <li><a href="./attendance.html">Attendance</a></li>
+          <li><a href="./timetable.html">Timetable</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Academics</h5>
+        <ul>
+          <li><a href="./fees.html">Fees Status</a></li>
+          <li><a href="./announcement.html">Announcements</a></li>
+          <li><a href="./assignment.html">Assignments</a></li>
+          <li><a href="./exam.html">Exams</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Student Support</h5>
+        <ul>
+          <li><a href="./profile.html">Student Profile</a></li>
+          <li><a href="./aboutus.html">About Portal</a></li>
+          <li><a href="./contact.html">Contact Us</a></li>
+          <li><a href="./settings.html">Settings</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 StudentHub Portal. All rights reserved.</p>
+      <p>Department of Computer Engineering | CHARUSAT</p>
+    </div>
   </footer>
+
+  <script src="../javascript/theme.js"></script>
+  <script src="../javascript/navigation.js"></script>
+  <script src="../javascript/notification.js"></script>
+  <script src="../javascript/faq.js"></script>
+  <script src="../javascript/modal.js"></script>
+  <script src="../javascript/slider.js"></script>
+  <script src="../javascript/main.js"></script>
 </body>
 </html>

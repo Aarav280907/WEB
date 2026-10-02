@@ -1,79 +1,62 @@
-footer {
-  background: #065f46;
-  color: #fff;
-  text-align: center;
-  padding: 15px;
-  margin-top: 40px;
+/* ==========================================================================
+   StudentHub - Contact Page Styles
+   ========================================================================== */
+
+.contact-main {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
 }
 
-footer p {
-  margin: 0;
-}
-main {
-  max-width: 800px;
-  margin: 40px auto;
-  background: #fff;
-  padding: 25px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+.contact-layout-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 24px;
+    align-items: start;
 }
 
-main h2 {
-  color: #065f46;
-  text-align: center;
-  margin-bottom: 20px;
+.contact-info-col {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
-.contact-info p {
-  color: #475569;
-  margin-bottom: 10px;
+.info-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 20px;
 }
 
-.contact-form {
-  margin-top: 30px;
+.info-icon {
+    font-size: 1.8rem;
+    line-height: 1;
+    flex-shrink: 0;
 }
 
-.contact-form h3 {
-  color: #1e293b;
-  margin-bottom: 20px;
-  text-align: center;
+.info-box h4 {
+    font-size: 1.05rem;
+    color: var(--text-main);
+    margin-bottom: 4px;
 }
 
-.contact-form label {
-  display: block;
-  font-weight: bold;
-  margin-bottom: 6px;
-  color: #334155;
+.info-box p {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    margin-bottom: 2px;
 }
 
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 14px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.contact-form-card form {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border: none;
+    box-shadow: none;
 }
 
-.contact-form textarea {
-  resize: vertical;
-}
-
-.contact-form button {
-  display: block;
-  width: 100%;
-  padding: 12px;
-  background: #065f46;
-  color: #fff;
-  border: none;
-  border-radius: 6px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.contact-form button:hover {
-  background: #064e3b;
+@media (max-width: 860px) {
+    .contact-layout-grid {
+        grid-template-columns: 1fr;
+    }
 }

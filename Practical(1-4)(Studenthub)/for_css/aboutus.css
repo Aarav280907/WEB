@@ -1,64 +1,53 @@
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #f1f5f9;
-  color: #1e293b;
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
+/* ==========================================================================
+   StudentHub - About Us Page Styles
+   ========================================================================== */
+
+.about-main {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
 }
 
-.header-title {
-  text-align: center;
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
 }
 
-.content {
-  max-width: 800px;
-  margin: 40px auto;
-  background: #fff;
-  padding: 25px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+.mission-card {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
-.content h1 {
-  color: #065f46;
-  text-align: center;
-  margin-bottom: 20px;
+.mission-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.7;
 }
 
-.content h2 {
-  color: #1e293b;
-  margin-top: 20px;
+.features-columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 12px;
 }
 
-.content p {
-  color: #475569;
-  line-height: 1.6;
+.feat-col {
+    background: var(--bg-subsurface);
+    border: 1px solid var(--border-color);
+    padding: 16px;
+    border-radius: var(--radius-sm);
 }
 
-footer h2 {
-  margin: 0 0 10px;
-  font-size: 20px;
+.feat-col strong {
+    color: var(--text-main);
+    display: block;
+    margin-bottom: 6px;
+    font-size: 0.95rem;
 }
 
-footer a {
-  color: #d97706;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
-
-footer {
-  background: #065f46;
-  color: #fff;
-  text-align: center;
-  padding: 15px;
-  margin-top: 40px;
-}
-
-footer p {
-  margin: 0;
+.feat-col p {
+    font-size: 0.88rem;
+    color: var(--text-muted);
 }

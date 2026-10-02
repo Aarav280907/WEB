@@ -3,60 +3,204 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Settings - Student Hub Portal</title>
+  <title>Settings & Preferences - StudentHub Portal</title>
+  <link rel="icon" type="image/svg+xml" href="../for_css/extra/favicon.svg">
   <link rel="stylesheet" href="../for_css/common.css">
   <link rel="stylesheet" href="../for_css/settings.css">
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Notification Banner -->
+  <div id="notification-banner" class="notification-banner" role="alert" aria-live="polite">
+    <div class="banner-content">
+      <span class="banner-icon" id="banner-icon">📢</span>
+      <span id="banner-text">Settings update: Theme preference is automatically remembered using browser localStorage.</span>
+    </div>
+    <button id="banner-close-btn" class="banner-close-btn" aria-label="Dismiss announcement">&times;</button>
+  </div>
+
   <header>
-    <h1>Student Hub Portal</h1>
-    <nav>
-      <a href="./home.html">Home</a>
-      <a href="./dashboard.html">Dashboard</a>
-      <a href="./profile.html">Profile</a>
-      <a href="./contact.html">Contact Us</a>
-      <a href="./aboutus.html">About Us</a>
-      <a href="./index.html">Logout</a>
-    </nav>
+    <div class="header-inner">
+      <a href="./home.html" class="header-brand-link" aria-label="StudentHub Home">
+        <img src="../for_css/extra/logo.svg" alt="StudentHub Logo" class="portal-logo">
+      </a>
+      
+      <div class="header-actions">
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark/light theme" title="Toggle Theme">
+          <span class="theme-icon" id="theme-icon">🌙</span>
+          <span class="theme-text" id="theme-text">Dark</span>
+        </button>
+
+        <button id="hamburger-btn" class="hamburger-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="header-inner" style="padding-top: 0; padding-bottom: 8px;">
+      <nav aria-label="Primary Navigation">
+        <a href="./home.html">🏠 Home</a>
+        <a href="./dashboard.html">📊 Dashboard</a>
+        <a href="./attendance.html">📈 Attendance</a>
+        <a href="./timetable.html">🗓️ Timetable</a>
+        <a href="./fees.html">💳 Fees</a>
+        <a href="./announcement.html">📢 Announcements</a>
+        <a href="./assignment.html">📝 Assignments</a>
+        <a href="./exam.html">📅 Exams</a>
+        <a href="./profile.html">👤 Profile</a>
+        <a href="./aboutus.html">ℹ️ About Us</a>
+        <a href="./contact.html">📞 Contact</a>
+        <a href="./settings.html" class="active">⚙️ Settings</a>
+        <a href="./index.html">🚪 Logout</a>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <h2>Settings</h2>
+  <main id="main-content" class="settings-main">
+    <div class="portal-page-header">
+      <div class="header-info">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="./home.html">Home</a>
+          <span class="breadcrumb-separator">/</span>
+          <span>Settings</span>
+        </nav>
+        <h2>⚙️ Portal Settings & Preferences</h2>
+        <p>Customize your user interface, theme display, notifications, and account credentials.</p>
+      </div>
 
-    <section class="account-settings">
-      <h3>Account Settings</h3>
-      <ul>
-        <li><a href="./change-password.html">Change Password</a></li>
-        <li><a href="./update-email.html">Update Email/Phone</a></li>
-        <li><a href="./edit-profile.html">Edit Profile Picture</a></li>
-      </ul>
-    </section>
+      <div class="header-actions">
+        <span class="badge badge-success">Preferences Auto-Saved</span>
+      </div>
+    </div>
 
-    <section class="preferences">
-      <h3>Preferences</h3>
-      <form>
-        <label for="theme">Theme:</label>
-        <select id="theme" name="theme">
-          <option value="light">Light</option>
-          <option value="dark">Dark</option>
-        </select><br><br>
+    <div class="settings-layout-grid">
+      <!-- UI & Theme Preferences Card -->
+      <section class="card">
+        <div class="card-header">
+          <div class="card-title">
+            <span>🌗</span> Display & Theme (localStorage)
+          </div>
+        </div>
 
-        <label for="language">Language:</label>
-        <select id="language" name="language">
-          <option value="en">English</option>
-          <option value="hi">Hindi</option>
-        </select><br><br>
+        <div class="setting-item-block">
+          <label for="theme"><strong>Color Theme:</strong></label>
+          <select id="theme" name="theme" class="form-select">
+            <option value="light">☀️ Light Theme (Default)</option>
+            <option value="dark">🌙 Dark Theme</option>
+          </select>
+          <small class="setting-hint">
+            Selecting a theme updates the portal interface immediately and saves to <code>localStorage (key: 'studenthub_theme')</code>.
+          </small>
+        </div>
 
-        <label>
-          <input type="checkbox" name="notifications" checked> Enable Notifications
-        </label>
-      </form>
-    </section>
-  
+        <div class="setting-item-block">
+          <label for="language"><strong>Interface Language:</strong></label>
+          <select id="language" name="language" class="form-select">
+            <option value="en">English (Official)</option>
+            <option value="hi">हिन्दी (Hindi)</option>
+            <option value="gu">ગુજરાતી (Gujarati)</option>
+          </select>
+        </div>
+
+        <div class="setting-item-block">
+          <label style="display: flex; align-items: center; gap: 10px; cursor: pointer;">
+            <input type="checkbox" name="notifications" checked style="width: 18px; height: 18px; margin: 0;">
+            <strong>Enable Campus Announcement Banner</strong>
+          </label>
+          <small class="setting-hint">Display live announcement alerts at the top of portal pages.</small>
+        </div>
+      </section>
+
+      <!-- Account Management & Security Card -->
+      <section class="card">
+        <div class="card-header">
+          <div class="card-title">
+            <span>🔒</span> Account & Security
+          </div>
+        </div>
+
+        <div class="account-options-list">
+          <div class="account-opt-item">
+            <div>
+              <strong>Student Profile Info</strong>
+              <p>View registered student details, enrollment numbers, and course codes.</p>
+            </div>
+            <a href="./profile.html" class="btn btn-sm btn-outline">View Profile</a>
+          </div>
+
+          <div class="account-opt-item">
+            <div>
+              <strong>Switch Account / Re-login</strong>
+              <p>Log out of the current student session and access the login portal.</p>
+            </div>
+            <a href="./login.html" class="btn btn-sm btn-secondary">Student Login</a>
+          </div>
+
+          <div class="account-opt-item">
+            <div>
+              <strong>Register New Student Account</strong>
+              <p>Create a new student enrollment profile on StudentHub.</p>
+            </div>
+            <a href="./signup.html" class="btn btn-sm btn-secondary">Sign Up</a>
+          </div>
+        </div>
+      </section>
+    </div>
   </main>
 
-  <footer>
-    <p>&copy; 2026 Student Hub Portal</p>
+  <footer class="portal-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <h4><img src="../for_css/extra/favicon.svg" alt="" style="height: 24px; width: 24px; display: inline-block; vertical-align: middle;"> StudentHub</h4>
+        <p>Charotar University of Science and Technology (CHARUSAT) — Smart digital student academic portal.</p>
+      </div>
+
+      <div class="footer-col">
+        <h5>Navigation</h5>
+        <ul>
+          <li><a href="./home.html">Home</a></li>
+          <li><a href="./dashboard.html">Dashboard</a></li>
+          <li><a href="./attendance.html">Attendance</a></li>
+          <li><a href="./timetable.html">Timetable</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Academics</h5>
+        <ul>
+          <li><a href="./fees.html">Fees Status</a></li>
+          <li><a href="./announcement.html">Announcements</a></li>
+          <li><a href="./assignment.html">Assignments</a></li>
+          <li><a href="./exam.html">Exams</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Student Support</h5>
+        <ul>
+          <li><a href="./profile.html">Student Profile</a></li>
+          <li><a href="./aboutus.html">About Portal</a></li>
+          <li><a href="./contact.html">Contact Us</a></li>
+          <li><a href="./settings.html">Settings</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 StudentHub Portal. All rights reserved.</p>
+      <p>Department of Computer Engineering | CHARUSAT</p>
+    </div>
   </footer>
+
+  <script src="../javascript/theme.js"></script>
+  <script src="../javascript/navigation.js"></script>
+  <script src="../javascript/notification.js"></script>
+  <script src="../javascript/faq.js"></script>
+  <script src="../javascript/modal.js"></script>
+  <script src="../javascript/slider.js"></script>
+  <script src="../javascript/main.js"></script>
 </body>
 </html>

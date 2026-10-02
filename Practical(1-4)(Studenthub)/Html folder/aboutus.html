@@ -3,40 +3,274 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us</title>
+  <title>About Us - StudentHub Portal</title>
+  <link rel="icon" type="image/svg+xml" href="../for_css/extra/favicon.svg">
   <link rel="stylesheet" href="../for_css/common.css">
   <link rel="stylesheet" href="../for_css/aboutus.css">
 </head>
 <body>
-  <header>
-    <h1>About Us</h1>
-    <nav>
-      <a href="./home.html">Home</a>
-      <a href="./services.html">Services</a>
-      <a href="./projects.html">Projects</a>
-      <a href="./contact.html">Contact</a>
-      <a href="./index.html">Logout</a>
-    </nav>
-  </header>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
-  <div class="content">
-    <h1>Welcome to Our Page</h1>
-    <section>
-      <h2>Our Mission</h2>
-      <p>Our mission is to make learning simple, fun, and accessible for everyone.</p>
-    </section>
-    
-    <section>
-      <h2>What We Do</h2>
-      <p>We create tutorials, projects, and resources to help students understand web development and programming.</p>
-    </section>
+  <!-- Notification Banner -->
+  <div id="notification-banner" class="notification-banner" role="alert" aria-live="polite">
+    <div class="banner-content">
+      <span class="banner-icon" id="banner-icon">📢</span>
+      <span id="banner-text">StudentHub Portal version 2.0 is live with enhanced interactive student services.</span>
+    </div>
+    <button id="banner-close-btn" class="banner-close-btn" aria-label="Dismiss announcement">&times;</button>
   </div>
 
-  <footer>
-    <h2>Contact Us</h2>
-    <p>You can reach us at: 
-      <a href="mailto:25dce072@charusat.edu.in">25dce072@charusat.edu.in</a>
-    </p>
+  <header>
+    <div class="header-inner">
+      <a href="./home.html" class="header-brand-link" aria-label="StudentHub Home">
+        <img src="../for_css/extra/logo.svg" alt="StudentHub Logo" class="portal-logo">
+      </a>
+      
+      <div class="header-actions">
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark/light theme" title="Toggle Theme">
+          <span class="theme-icon" id="theme-icon">🌙</span>
+          <span class="theme-text" id="theme-text">Dark</span>
+        </button>
+
+        <button id="hamburger-btn" class="hamburger-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="header-inner" style="padding-top: 0; padding-bottom: 8px;">
+      <nav aria-label="Primary Navigation">
+        <a href="./home.html">🏠 Home</a>
+        <a href="./dashboard.html">📊 Dashboard</a>
+        <a href="./attendance.html">📈 Attendance</a>
+        <a href="./timetable.html">🗓️ Timetable</a>
+        <a href="./fees.html">💳 Fees</a>
+        <a href="./announcement.html">📢 Announcements</a>
+        <a href="./assignment.html">📝 Assignments</a>
+        <a href="./exam.html">📅 Exams</a>
+        <a href="./profile.html">👤 Profile</a>
+        <a href="./aboutus.html" class="active">ℹ️ About Us</a>
+        <a href="./contact.html">📞 Contact</a>
+        <a href="./settings.html">⚙️ Settings</a>
+        <a href="./index.html">🚪 Logout</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="about-main">
+    <div class="portal-page-header">
+      <div class="header-info">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="./home.html">Home</a>
+          <span class="breadcrumb-separator">/</span>
+          <span>About Us</span>
+        </nav>
+        <h2>ℹ️ About StudentHub Portal</h2>
+        <p>Charotar University of Science and Technology (CHARUSAT) — Smart Academic Student Portal.</p>
+      </div>
+
+      <div class="header-actions">
+        <button class="btn btn-primary open-modal-btn" data-modal-target="about-modal">
+          💡 University Guidelines
+        </button>
+      </div>
+    </div>
+
+    <!-- Mission & Vision Section -->
+    <section class="about-grid">
+      <div class="card mission-card">
+        <div class="card-header">
+          <div class="card-title">🎯 Our Mission</div>
+        </div>
+        <p>Our mission is to make learning, academic tracking, and university administrative tasks simple, intuitive, and accessible for every student and faculty member at CHARUSAT.</p>
+      </div>
+
+      <div class="card mission-card">
+        <div class="card-header">
+          <div class="card-title">🌐 What We Do</div>
+        </div>
+        <p>We provide a centralized digital platform to seamlessly manage attendance, timetables, coursework practicals, fee payments, and verified announcements through a responsive, modern web interface.</p>
+      </div>
+    </section>
+
+    <!-- Key Platform Highlights -->
+    <section class="card" style="margin: 10px 0;">
+      <div class="card-header">
+        <div class="card-title">✨ Portal Capabilities & Features</div>
+      </div>
+
+      <div class="features-columns">
+        <div class="feat-col">
+          <strong>📊 Real-Time Analytics</strong>
+          <p>Instant attendance tracking with minimum cutoff warnings and eligibility indicators.</p>
+        </div>
+        <div class="feat-col">
+          <strong>🗓️ Dynamic Scheduling</strong>
+          <p>Organized weekly timetables and midterm/final semester exam schedules.</p>
+        </div>
+        <div class="feat-col">
+          <strong>🌗 Dual Theme Support</strong>
+          <p>High-contrast Light and Dark mode options saved persistently in browser <code>localStorage</code>.</p>
+        </div>
+        <div class="feat-col">
+          <strong>📱 Universal Responsiveness</strong>
+          <p>Built with accessible HTML5, responsive CSS Grid/Flexbox, and mobile-friendly hamburger navigation.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Practical 4: Comprehensive Collapsible FAQ Accordion Section -->
+    <section class="faq-section" aria-label="Frequently Asked Questions">
+      <div class="section-title-wrap">
+        <h2>❓ Frequently Asked Questions (FAQ)</h2>
+        <p>Click on any question below to expand the detailed answer:</p>
+      </div>
+
+      <div class="faq-container" id="faq-section">
+        
+        <!-- FAQ 1 -->
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-ans-1">
+            <span>1. What is the StudentHub Portal?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer" id="faq-ans-1" role="region">
+            <div class="faq-answer-inner">
+              <p>StudentHub is an online centralized student information portal developed as part of the Web Development Frameworks (WDF) curriculum at CHARUSAT to streamline university communication and academic monitoring.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-ans-2">
+            <span>2. How is attendance calculated and updated?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer" id="faq-ans-2" role="region">
+            <div class="faq-answer-inner">
+              <p>Faculty members log daily attendance after each lecture or lab session. The system calculates your percentage in real time as <code>(Attended Classes / Total Classes) &times; 100</code>. A minimum of 80% is required for exam eligibility.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-ans-3">
+            <span>3. How do I switch between Dark and Light mode?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer" id="faq-ans-3" role="region">
+            <div class="faq-answer-inner">
+              <p>Click the <strong>Theme Switcher button (🌙 / ☀️)</strong> located in the header of any page or select your choice in the <strong>Settings</strong> page. Your selection is remembered across browser sessions using HTML5 <code>localStorage</code>.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-ans-4">
+            <span>4. Where can I find exam timetables and syllabus circulars?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer" id="faq-ans-4" role="region">
+            <div class="faq-answer-inner">
+              <p>Access the <strong>Exams</strong> and <strong>Announcements</strong> sections directly from your dashboard to view the latest examination schedules, seating arrangements, and syllabus guidelines.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-ans-5">
+            <span>5. What should I do if I forget my login password?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer" id="faq-ans-5" role="region">
+            <div class="faq-answer-inner">
+              <p>Click on the "Forgot Password" link on the login page or contact the university administration office via the <strong>Contact Us</strong> page with your Student ID (e.g. 25DCE072).</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal Component -->
+  <div id="about-modal" class="modal-backdrop" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 id="modal-title">🏛️ CHARUSAT Academic Guidelines</h3>
+        <button class="modal-close-btn" id="modal-close-btn" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Charotar University of Science and Technology (CHARUSAT)</strong></p>
+        <p>Faculty of Technology & Engineering (FTE) — Department of Computer Engineering</p>
+        <ul>
+          <li><strong>Academic Discipline:</strong> Maintain regular attendance above 80% and adhere strictly to coursework deadlines.</li>
+          <li><strong>Portal Security:</strong> Protect your student account credentials and log out on shared computers.</li>
+          <li><strong>Support:</strong> For questions, reach out via the official student email: <code>25dce072@charusat.edu.in</code>.</li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-modal-close>Understood</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="portal-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <h4><img src="../for_css/extra/favicon.svg" alt="" style="height: 24px; width: 24px; display: inline-block; vertical-align: middle;"> StudentHub</h4>
+        <p>Charotar University of Science and Technology (CHARUSAT) — Smart digital student academic portal.</p>
+      </div>
+
+      <div class="footer-col">
+        <h5>Navigation</h5>
+        <ul>
+          <li><a href="./home.html">Home</a></li>
+          <li><a href="./dashboard.html">Dashboard</a></li>
+          <li><a href="./attendance.html">Attendance</a></li>
+          <li><a href="./timetable.html">Timetable</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Academics</h5>
+        <ul>
+          <li><a href="./fees.html">Fees Status</a></li>
+          <li><a href="./announcement.html">Announcements</a></li>
+          <li><a href="./assignment.html">Assignments</a></li>
+          <li><a href="./exam.html">Exams</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Student Support</h5>
+        <ul>
+          <li><a href="./profile.html">Student Profile</a></li>
+          <li><a href="./aboutus.html">About Portal</a></li>
+          <li><a href="./contact.html">Contact Us</a></li>
+          <li><a href="./settings.html">Settings</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 StudentHub Portal. All rights reserved.</p>
+      <p>Department of Computer Engineering | CHARUSAT</p>
+    </div>
   </footer>
+
+  <script src="../javascript/theme.js"></script>
+  <script src="../javascript/navigation.js"></script>
+  <script src="../javascript/notification.js"></script>
+  <script src="../javascript/faq.js"></script>
+  <script src="../javascript/modal.js"></script>
+  <script src="../javascript/slider.js"></script>
+  <script src="../javascript/main.js"></script>
 </body>
 </html>

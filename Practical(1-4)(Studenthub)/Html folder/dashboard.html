@@ -3,44 +3,304 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboard - Student Hub Portal</title>
+  <title>Dashboard - StudentHub Portal</title>
+  <link rel="icon" type="image/svg+xml" href="../for_css/extra/favicon.svg">
   <link rel="stylesheet" href="../for_css/common.css">
   <link rel="stylesheet" href="../for_css/dashboard.css">
 </head>
 <body>
+  <!-- Skip link for accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Notification Banner -->
+  <div id="notification-banner" class="notification-banner" role="alert" aria-live="polite">
+    <div class="banner-content">
+      <span class="banner-icon" id="banner-icon">📢</span>
+      <span id="banner-text">Notice: Laboratory practical exams for Web Development Frameworks begin next Monday.</span>
+    </div>
+    <button id="banner-close-btn" class="banner-close-btn" aria-label="Dismiss announcement">&times;</button>
+  </div>
+
+  <!-- Navbar / Header -->
   <header>
-    <h1>Student Hub Portal</h1>
-    <nav>
-      <a href="./home.html">Home</a>
-      <a href="./profile.html">Profile</a>
-      <a href="./contact.html">Contact Us</a>
-      <a href="./settings.html">Settings</a>
-      <a href="./index.html">Logout</a>
-    </nav>
+    <div class="header-inner">
+      <a href="./home.html" class="header-brand-link" aria-label="StudentHub Home">
+        <img src="../for_css/extra/logo.svg" alt="StudentHub Logo" class="portal-logo">
+      </a>
+      
+      <div class="header-actions">
+        <!-- Theme Toggle -->
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark/light theme" title="Toggle Theme">
+          <span class="theme-icon" id="theme-icon">🌙</span>
+          <span class="theme-text" id="theme-text">Dark</span>
+        </button>
+
+        <!-- Hamburger Button -->
+        <button id="hamburger-btn" class="hamburger-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Navigation Menu -->
+    <div class="header-inner" style="padding-top: 0; padding-bottom: 8px;">
+      <nav aria-label="Primary Navigation">
+        <a href="./home.html">🏠 Home</a>
+        <a href="./dashboard.html" class="active">📊 Dashboard</a>
+        <a href="./attendance.html">📈 Attendance</a>
+        <a href="./timetable.html">🗓️ Timetable</a>
+        <a href="./fees.html">💳 Fees</a>
+        <a href="./announcement.html">📢 Announcements</a>
+        <a href="./assignment.html">📝 Assignments</a>
+        <a href="./exam.html">📅 Exams</a>
+        <a href="./profile.html">👤 Profile</a>
+        <a href="./aboutus.html">ℹ️ About Us</a>
+        <a href="./contact.html">📞 Contact</a>
+        <a href="./settings.html">⚙️ Settings</a>
+        <a href="./index.html">🚪 Logout</a>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <h2>Welcome, [Student Name]</h2>
-    <section class="dashboard-cards">
-      <div class="card"><a href="./attendance.html">Attendance</a></div>
-      <div class="card"><a href="./timetable.html">Timetable</a></div>
-      <div class="card"><a href="./fees.html">Fees</a></div>
-      <div class="card"><a href="./announcement.html">Announcements</a></div>
-      <div class="card"><a href="./assignment.html">Assignments</a></div>
-      <div class="card"><a href="./exam.html">Exams</a></div>
+  <main id="main-content" class="dashboard-main">
+    <!-- Breadcrumb & Page Title -->
+    <div class="portal-page-header">
+      <div class="header-info">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="./home.html">Home</a>
+          <span class="breadcrumb-separator">/</span>
+          <span>Dashboard</span>
+        </nav>
+        <h2 id="dynamic-greeting">Welcome, Aarav Patel</h2>
+        <p>Student ID: <strong>25DCE072</strong> | B.Tech Computer Engineering (Semester 3)</p>
+      </div>
+
+      <div class="header-actions">
+        <button class="btn btn-primary open-modal-btn" data-modal-target="dashboard-modal">
+          💡 View Academic Guidelines
+        </button>
+      </div>
+    </div>
+
+    <!-- Live Academic Key Performance Indicators -->
+    <section class="card-grid" aria-label="Academic Summary Cards">
+      <div class="stat-card">
+        <div class="stat-icon-wrapper">📊</div>
+        <div class="stat-content" style="width: 100%;">
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span class="stat-value">85%</span>
+            <span class="badge badge-success">Good</span>
+          </div>
+          <span class="stat-label">Overall Attendance</span>
+          <div class="progress-bar" style="height: 6px; margin: 6px 0 0 0;">
+            <div class="progress" style="width: 85%;"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon-wrapper accent">🏆</div>
+        <div class="stat-content">
+          <div style="display: flex; justify-content: space-between; align-items: center; gap: 8px;">
+            <span class="stat-value">8.20</span>
+            <span class="badge badge-info">Sem 2</span>
+          </div>
+          <span class="stat-label">Cumulative SGPA</span>
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon-wrapper">💳</div>
+        <div class="stat-content">
+          <div style="display: flex; justify-content: space-between; align-items: center; gap: 8px;">
+            <span class="stat-value">₹40,000</span>
+            <span class="badge badge-warning">Due: ₹30k</span>
+          </div>
+          <span class="stat-label">Paid Term Fees</span>
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon-wrapper">📝</div>
+        <div class="stat-content">
+          <div style="display: flex; justify-content: space-between; align-items: center; gap: 8px;">
+            <span class="stat-value">4 / 4</span>
+            <span class="badge badge-success">On Track</span>
+          </div>
+          <span class="stat-label">Lab Practicals Ready</span>
+        </div>
+      </div>
     </section>
 
-    <section class="notifications">
-      <h3>Latest Announcements</h3>
-      <ul>
-        <li>Exam schedule released for Semester 4</li>
-        <li>Assignment submission deadline: July 25</li>
-      </ul>
+    <!-- Core Portal Modules Grid -->
+    <section class="dashboard-modules" aria-label="Academic Management Modules">
+      <div class="section-title-wrap" style="text-align: left; margin-bottom: 16px;">
+        <h3>Academic Navigation</h3>
+      </div>
+
+      <div class="dashboard-cards">
+        <div class="card module-box">
+          <span class="module-symbol">📊</span>
+          <h4><a href="./attendance.html">Attendance</a></h4>
+          <p>Subject-wise tracking & percentages</p>
+          <a href="./attendance.html" class="btn btn-sm btn-outline" style="margin-top: 10px;">Check Status &rarr;</a>
+        </div>
+
+        <div class="card module-box">
+          <span class="module-symbol">🗓️</span>
+          <h4><a href="./timetable.html">Timetable</a></h4>
+          <p>Weekly classroom & lab schedules</p>
+          <a href="./timetable.html" class="btn btn-sm btn-outline" style="margin-top: 10px;">View Schedule &rarr;</a>
+        </div>
+
+        <div class="card module-box">
+          <span class="module-symbol">💳</span>
+          <h4><a href="./fees.html">Fees Details</a></h4>
+          <p>Fee breakdown & receipt history</p>
+          <a href="./fees.html" class="btn btn-sm btn-outline" style="margin-top: 10px;">Pay / Check &rarr;</a>
+        </div>
+
+        <div class="card module-box">
+          <span class="module-symbol">📢</span>
+          <h4><a href="./announcement.html">Announcements</a></h4>
+          <p>Official circulars and notifications</p>
+          <a href="./announcement.html" class="btn btn-sm btn-outline" style="margin-top: 10px;">Read Circulars &rarr;</a>
+        </div>
+
+        <div class="card module-box">
+          <span class="module-symbol">📝</span>
+          <h4><a href="./assignment.html">Assignments</a></h4>
+          <p>Course practicals & submissions</p>
+          <a href="./assignment.html" class="btn btn-sm btn-outline" style="margin-top: 10px;">View Tasks &rarr;</a>
+        </div>
+
+        <div class="card module-box">
+          <span class="module-symbol">📅</span>
+          <h4><a href="./exam.html">Exams</a></h4>
+          <p>Mid-term & semester exam slots</p>
+          <a href="./exam.html" class="btn btn-sm btn-outline" style="margin-top: 10px;">View Dates &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Latest Announcements & Notifications Section -->
+    <section class="card notifications-section" aria-label="Latest Circulars">
+      <div class="card-header">
+        <div class="card-title">
+          <span>📢</span> Latest University Announcements
+        </div>
+        <button class="btn btn-sm btn-secondary open-modal-btn" data-modal-target="dashboard-modal">
+          View Detailed Notice
+        </button>
+      </div>
+
+      <div class="notice-list">
+        <div class="notice-item">
+          <div class="notice-badge"><span class="badge badge-info">Exams</span></div>
+          <div class="notice-content">
+            <strong>Exam Schedule Released for Semester 4</strong>
+            <p>Mid-semester examinations commence from 10th August 2026. Hall tickets will be issued online.</p>
+          </div>
+          <span class="notice-date">August 2026</span>
+        </div>
+
+        <div class="notice-item">
+          <div class="notice-badge"><span class="badge badge-warning">Submission</span></div>
+          <div class="notice-content">
+            <strong>Assignment Submission Deadline</strong>
+            <p>Web Development Frameworks Practical 4 submission and journal verification deadline is July 25th.</p>
+          </div>
+          <span class="notice-date">July 2026</span>
+        </div>
+
+        <div class="notice-item">
+          <div class="notice-badge"><span class="badge badge-danger">Fees</span></div>
+          <div class="notice-content">
+            <strong>Semester Fee Payment Window</strong>
+            <p>All students must clear remaining tuition fee dues by 30th August 2026 to avoid late registration charges.</p>
+          </div>
+          <span class="notice-date">August 2026</span>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2026 Student Hub Portal</p>
+  <!-- Modal Component -->
+  <div id="dashboard-modal" class="modal-backdrop" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 id="modal-title">📌 Important Academic Circular & Notice</h3>
+        <button class="modal-close-btn" id="modal-close-btn" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Charotar University of Science and Technology (CHARUSAT)</strong></p>
+        <p>Faculty of Technology and Engineering — Department of Computer Engineering</p>
+        <ul>
+          <li><strong>Mid-Semester Exam Dates:</strong> August 10 – August 18, 2026.</li>
+          <li><strong>Attendance Requirement:</strong> 80% minimum attendance is compulsory across all enrolled subjects.</li>
+          <li><strong>Lab Journal Verification:</strong> Practicals 1–4 must be completed and demonstrated before mid-term evaluations.</li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-modal-close>Understood</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Unified Footer -->
+  <footer class="portal-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <h4><img src="../for_css/extra/favicon.svg" alt="" style="height: 24px; width: 24px; display: inline-block; vertical-align: middle;"> StudentHub</h4>
+        <p>Charotar University of Science and Technology (CHARUSAT) — Smart digital student academic portal.</p>
+      </div>
+
+      <div class="footer-col">
+        <h5>Navigation</h5>
+        <ul>
+          <li><a href="./home.html">Home</a></li>
+          <li><a href="./dashboard.html">Dashboard</a></li>
+          <li><a href="./attendance.html">Attendance</a></li>
+          <li><a href="./timetable.html">Timetable</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Academics</h5>
+        <ul>
+          <li><a href="./fees.html">Fees Status</a></li>
+          <li><a href="./announcement.html">Announcements</a></li>
+          <li><a href="./assignment.html">Assignments</a></li>
+          <li><a href="./exam.html">Exams</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Student Support</h5>
+        <ul>
+          <li><a href="./profile.html">Student Profile</a></li>
+          <li><a href="./aboutus.html">About Portal</a></li>
+          <li><a href="./contact.html">Contact Us</a></li>
+          <li><a href="./settings.html">Settings</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 StudentHub Portal. All rights reserved.</p>
+      <p>Department of Computer Engineering | CHARUSAT</p>
+    </div>
   </footer>
+
+  <!-- Practical 4 JavaScript Modules -->
+  <script src="../javascript/theme.js"></script>
+  <script src="../javascript/navigation.js"></script>
+  <script src="../javascript/notification.js"></script>
+  <script src="../javascript/faq.js"></script>
+  <script src="../javascript/modal.js"></script>
+  <script src="../javascript/slider.js"></script>
+  <script src="../javascript/main.js"></script>
 </body>
 </html>

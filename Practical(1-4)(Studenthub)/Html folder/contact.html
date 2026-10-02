@@ -3,50 +3,203 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Us - Student Hub Portal</title>
+  <title>Contact Us - StudentHub Portal</title>
+  <link rel="icon" type="image/svg+xml" href="../for_css/extra/favicon.svg">
   <link rel="stylesheet" href="../for_css/common.css">
   <link rel="stylesheet" href="../for_css/contact.css">
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
   <header>
-    <h1>Student Hub Portal</h1>
-    <nav>
-      <a href="./home.html">Home</a>
-      <a href="./dashboard.html">Dashboard</a>
-      <a href="./profile.html">Profile</a>
-      <a href="./aboutus.html">About Us</a>
-      <a href="./settings.html">Settings</a>
-      <a href="./index.html">Logout</a>
-    </nav>
+    <div class="header-inner">
+      <a href="./home.html" class="header-brand-link" aria-label="StudentHub Home">
+        <img src="../for_css/extra/logo.svg" alt="StudentHub Logo" class="portal-logo">
+      </a>
+      
+      <div class="header-actions">
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark/light theme" title="Toggle Theme">
+          <span class="theme-icon" id="theme-icon">🌙</span>
+          <span class="theme-text" id="theme-text">Dark</span>
+        </button>
+
+        <button id="hamburger-btn" class="hamburger-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="header-inner" style="padding-top: 0; padding-bottom: 8px;">
+      <nav aria-label="Primary Navigation">
+        <a href="./home.html">🏠 Home</a>
+        <a href="./dashboard.html">📊 Dashboard</a>
+        <a href="./attendance.html">📈 Attendance</a>
+        <a href="./timetable.html">🗓️ Timetable</a>
+        <a href="./fees.html">💳 Fees</a>
+        <a href="./announcement.html">📢 Announcements</a>
+        <a href="./assignment.html">📝 Assignments</a>
+        <a href="./exam.html">📅 Exams</a>
+        <a href="./profile.html">👤 Profile</a>
+        <a href="./aboutus.html">ℹ️ About Us</a>
+        <a href="./contact.html" class="active">📞 Contact</a>
+        <a href="./settings.html">⚙️ Settings</a>
+        <a href="./index.html">🚪 Logout</a>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <h2>Contact Us</h2>
-    <section class="contact-info">
-      <p><strong>Email:</strong> studenthub@university.edu</p>
-      <p><strong>Phone:</strong> +91 98765 43210</p>
-      <p><strong>Address:</strong> Student Hub Office, University Campus, Petlad, Gujarat, India</p>
-    </section>
+  <main id="main-content" class="contact-main">
+    <div class="portal-page-header">
+      <div class="header-info">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="./home.html">Home</a>
+          <span class="breadcrumb-separator">/</span>
+          <span>Contact Us</span>
+        </nav>
+        <h2>📞 Contact University Support</h2>
+        <p>Get in touch with academic counselors, examination coordinators, and technical support.</p>
+      </div>
 
-    <section class="contact-form">
-      <h3>Send us a message</h3>
-      <form>
-        <label for="name">Name:</label><br>
-        <input type="text" id="name" name="name" required><br><br>
+      <div class="header-actions">
+        <span class="badge badge-success">IT Support Desk Online</span>
+      </div>
+    </div>
 
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email" required><br><br>
+    <div class="contact-layout-grid">
+      <!-- Contact Info Cards Column -->
+      <div class="contact-info-col">
+        <div class="card info-box">
+          <div class="info-icon">📧</div>
+          <div>
+            <h4>Email Support</h4>
+            <p><a href="mailto:studenthub@charusat.edu.in">studenthub@charusat.edu.in</a></p>
+            <p><a href="mailto:25dce072@charusat.edu.in">25dce072@charusat.edu.in</a></p>
+          </div>
+        </div>
 
-        <label for="message">Message:</label><br>
-        <textarea id="message" name="message" rows="5" required></textarea><br><br>
+        <div class="card info-box">
+          <div class="info-icon">📞</div>
+          <div>
+            <h4>Phone Support</h4>
+            <p><strong>Helpdesk:</strong> +91 98765 43210</p>
+            <p><strong>Department:</strong> +91 2697 265011</p>
+          </div>
+        </div>
 
-        <button type="submit">Submit</button>
-      </form>
-    </section>
+        <div class="card info-box">
+          <div class="info-icon">📍</div>
+          <div>
+            <h4>Campus Address</h4>
+            <p>Charotar University of Science and Technology (CHARUSAT)</p>
+            <p>139, Highway, Changa, Petlad, Gujarat 388421, India</p>
+          </div>
+        </div>
+
+        <div class="card info-box">
+          <div class="info-icon">⏰</div>
+          <div>
+            <h4>Office Working Hours</h4>
+            <p>Monday – Friday: 9:00 AM – 5:00 PM</p>
+            <p>Saturday: 9:00 AM – 1:00 PM</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Inquiry Form Column -->
+      <section class="card contact-form-card">
+        <div class="card-header">
+          <div class="card-title">
+            <span>✉️</span> Send a Direct Inquiry
+          </div>
+        </div>
+
+        <form id="contact-form" onsubmit="event.preventDefault(); alert('Thank you! Your message has been logged with the StudentHub support desk.'); this.reset();">
+          <div class="form-group">
+            <label for="name">Your Full Name:</label>
+            <input type="text" id="name" name="name" required placeholder="e.g. Aarav Patel" value="Aarav Hiteshkumar Patel">
+          </div>
+
+          <div class="form-group">
+            <label for="email">Student / Official Email:</label>
+            <input type="email" id="email" name="email" required placeholder="e.g. 25dce072@charusat.edu.in" value="25dce072@charusat.edu.in">
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Inquiry Subject / Topic:</label>
+            <select id="subject" name="subject" class="form-select">
+              <option value="attendance">Attendance Discrepancy Query</option>
+              <option value="exam">Examination & Seating Inquiries</option>
+              <option value="fees">Fee Payment & Receipt Status</option>
+              <option value="technical">Portal Technical Assistance</option>
+              <option value="other">General Academic Question</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Your Message / Query:</label>
+            <textarea id="message" name="message" rows="5" required placeholder="Describe your query or feedback in detail..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%;">
+            📤 Submit Inquiry to Helpdesk
+          </button>
+        </form>
+      </section>
+    </div>
   </main>
 
-  <footer>
-    <p>&copy; 2026 Student Hub Portal. All rights reserved.</p>
+  <footer class="portal-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <h4><img src="../for_css/extra/favicon.svg" alt="" style="height: 24px; width: 24px; display: inline-block; vertical-align: middle;"> StudentHub</h4>
+        <p>Charotar University of Science and Technology (CHARUSAT) — Smart digital student academic portal.</p>
+      </div>
+
+      <div class="footer-col">
+        <h5>Navigation</h5>
+        <ul>
+          <li><a href="./home.html">Home</a></li>
+          <li><a href="./dashboard.html">Dashboard</a></li>
+          <li><a href="./attendance.html">Attendance</a></li>
+          <li><a href="./timetable.html">Timetable</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Academics</h5>
+        <ul>
+          <li><a href="./fees.html">Fees Status</a></li>
+          <li><a href="./announcement.html">Announcements</a></li>
+          <li><a href="./assignment.html">Assignments</a></li>
+          <li><a href="./exam.html">Exams</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Student Support</h5>
+        <ul>
+          <li><a href="./profile.html">Student Profile</a></li>
+          <li><a href="./aboutus.html">About Portal</a></li>
+          <li><a href="./contact.html">Contact Us</a></li>
+          <li><a href="./settings.html">Settings</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 StudentHub Portal. All rights reserved.</p>
+      <p>Department of Computer Engineering | CHARUSAT</p>
+    </div>
   </footer>
+
+  <script src="../javascript/theme.js"></script>
+  <script src="../javascript/navigation.js"></script>
+  <script src="../javascript/notification.js"></script>
+  <script src="../javascript/faq.js"></script>
+  <script src="../javascript/modal.js"></script>
+  <script src="../javascript/slider.js"></script>
+  <script src="../javascript/main.js"></script>
 </body>
 </html>

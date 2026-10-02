@@ -1,50 +1,78 @@
-footer {
-  background: #065f46;
-  color: #fff;
-  text-align: center;
-  padding: 15px;
-  margin-top: 40px;
+/* ==========================================================================
+   StudentHub - Timetable Page Styles
+   ========================================================================== */
+
+.timetable-main {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
 }
 
-footer p {
-  margin: 0;
-}
-main {
-  max-width: 1000px;
-}
-
-.timetable {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 30px 0;
-  font-size: 16px;
-  text-align: center;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+.timetable-note {
+    font-size: 0.85rem;
+    color: var(--accent);
+    font-weight: 700;
 }
 
-.timetable th,
-.timetable td {
-  border: 1px solid #ccc;
-  padding: 12px;
+.timetable-table {
+    text-align: center;
 }
 
-.timetable th {
-  background: #065f46;
-  color: #fff;
-  font-weight: bold;
+.timetable-table th {
+    text-align: center;
+    font-size: 0.82rem;
+    padding: 14px 10px;
 }
 
-.timetable tr:nth-child(even) {
-  background: #f9fafb;
+.timetable-table td {
+    padding: 12px 8px;
+    vertical-align: middle;
 }
 
-.timetable tr:hover {
-  background: #e2e8f0;
-  transition: background 0.3s ease;
+.day-col {
+    background: var(--bg-subsurface) !important;
+    color: var(--primary) !important;
+    font-size: 0.95rem;
+    text-align: left !important;
+    padding-left: 16px !important;
+    border-right: 2px solid var(--border-color);
 }
 
-.timetable td:first-child {
-  font-weight: bold;
-  background: #f1f5f9;
-  color: #065f46;
+body.dark-theme .day-col {
+    color: var(--primary-light) !important;
 }
+
+/* Subject Slot Badge Pills */
+.slot-pill {
+    display: block;
+    padding: 8px 10px;
+    border-radius: var(--radius-sm);
+    font-size: 0.82rem;
+    font-weight: 700;
+    line-height: 1.2;
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.slot-pill:hover {
+    transform: scale(1.04);
+    box-shadow: var(--shadow-sm);
+}
+
+.slot-pill.web { background: #ecfdf5; color: #065f46; border: 1px solid #a7f3d0; }
+.slot-pill.dsa { background: #eff6ff; color: #1e40af; border: 1px solid #bfdbfe; }
+.slot-pill.db  { background: #fdf4ff; color: #86198f; border: 1px solid #f5d0fe; }
+.slot-pill.os  { background: #fff7ed; color: #9a3412; border: 1px solid #fed7aa; }
+.slot-pill.cn  { background: #f0fdf4; color: #166534; border: 1px solid #bbf7d0; }
+.slot-pill.math { background: #fefce8; color: #854d0e; border: 1px solid #fef08a; }
+.slot-pill.elective { background: #f1f5f9; color: #334155; border: 1px solid #cbd5e1; }
+.slot-pill.seminar { background: #f0fdfa; color: #115e59; border: 1px solid #99f6e4; }
+
+/* Dark mode overrides for pills */
+body.dark-theme .slot-pill.web { background: rgba(6, 95, 70, 0.4); color: #a7f3d0; border-color: #047857; }
+body.dark-theme .slot-pill.dsa { background: rgba(30, 64, 175, 0.4); color: #bfdbfe; border-color: #1d4ed8; }
+body.dark-theme .slot-pill.db  { background: rgba(134, 25, 143, 0.4); color: #f5d0fe; border-color: #a21caf; }
+body.dark-theme .slot-pill.os  { background: rgba(154, 52, 18, 0.4); color: #fed7aa; border-color: #c2410c; }
+body.dark-theme .slot-pill.cn  { background: rgba(22, 101, 52, 0.4); color: #bbf7d0; border-color: #15803d; }
+body.dark-theme .slot-pill.math { background: rgba(133, 77, 14, 0.4); color: #fef08a; border-color: #a16207; }
+body.dark-theme .slot-pill.elective { background: rgba(51, 65, 85, 0.4); color: #e2e8f0; border-color: #475569; }
+body.dark-theme .slot-pill.seminar { background: rgba(17, 94, 89, 0.4); color: #99f6e4; border-color: #0f766e; }

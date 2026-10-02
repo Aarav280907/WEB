@@ -3,32 +3,359 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home - Student Hub Portal</title>
+  <title>Home - StudentHub Portal</title>
+  <link rel="icon" type="image/svg+xml" href="../for_css/extra/favicon.svg">
   <link rel="stylesheet" href="../for_css/common.css">
   <link rel="stylesheet" href="../for_css/home.css">
 </head>
 <body>
+  <!-- Accessible Skip to Main Content Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- 1. Notification Banner (Practical 4) -->
+  <div id="notification-banner" class="notification-banner" role="alert" aria-live="polite">
+    <div class="banner-content">
+      <span class="banner-icon" id="banner-icon">📢</span>
+      <span id="banner-text">Welcome to StudentHub! Semester 4 registrations and mid-term exam timetables are now available.</span>
+    </div>
+    <button id="banner-close-btn" class="banner-close-btn" aria-label="Dismiss announcement">&times;</button>
+  </div>
+
+  <!-- Unified Navbar / Header -->
   <header>
-    <h1>Student Hub Portal</h1>
-    <nav>
-    
-      <a href="./profile.html">Profile</a>
-      <a href="./dashboard.html">Dashboard</a>
-      <a href="./contact.html">Contact Us</a>
-      <a href="./aboutus.html">About Us</a>
-      <a href="./settings.html">Settings</a>
-      <a href="./index.html">Logout</a>
+    <div class="header-inner">
+      <a href="./home.html" class="header-brand-link" aria-label="StudentHub Home">
+        <img src="../for_css/extra/logo.svg" alt="StudentHub Logo" class="portal-logo">
+      </a>
       
-    </nav>
+      <div class="header-actions">
+        <!-- Practical 4: Light/Dark Theme Switcher Button -->
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark/light theme" title="Toggle Theme">
+          <span class="theme-icon" id="theme-icon">🌙</span>
+          <span class="theme-text" id="theme-text">Dark</span>
+        </button>
+
+        <!-- Practical 4: Hamburger Menu Button -->
+        <button id="hamburger-btn" class="hamburger-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <div class="header-inner" style="padding-top: 0; padding-bottom: 8px;">
+      <nav aria-label="Primary Navigation">
+        <a href="./home.html" class="active">🏠 Home</a>
+        <a href="./dashboard.html">📊 Dashboard</a>
+        <a href="./attendance.html">📈 Attendance</a>
+        <a href="./timetable.html">🗓️ Timetable</a>
+        <a href="./fees.html">💳 Fees</a>
+        <a href="./announcement.html">📢 Announcements</a>
+        <a href="./assignment.html">📝 Assignments</a>
+        <a href="./exam.html">📅 Exams</a>
+        <a href="./profile.html">👤 Profile</a>
+        <a href="./aboutus.html">ℹ️ About Us</a>
+        <a href="./contact.html">📞 Contact</a>
+        <a href="./settings.html">⚙️ Settings</a>
+        <a href="./index.html">🚪 Logout</a>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <h2>Welcome</h2>
-    <p>Select an option from the navigation menu to access your academic information.</p>
+  <main id="main-content" class="home-main">
+    <!-- Hero / Welcome Banner -->
+    <section class="home-hero">
+      <div class="hero-text">
+        <span class="badge badge-success">Academic Session 2026</span>
+        <!-- Practical 4: Dynamic Greeting with JS DOM manipulation -->
+        <h1 id="dynamic-greeting">Welcome back, Aarav!</h1>
+        <p>Access your real-time academic records, attendance percentages, fee balances, and latest announcements all from one smart dashboard.</p>
+        
+        <div class="hero-actions">
+          <a href="./dashboard.html" class="btn btn-primary">🚀 Go to Dashboard</a>
+          <button class="btn btn-secondary open-modal-btn" id="open-modal-btn" data-modal-target="portal-modal">
+            💡 Quick Portal Guide
+          </button>
+          <button class="btn btn-outline" id="trigger-alert-btn">
+            📢 Test Alert
+          </button>
+        </div>
+      </div>
+      
+      <!-- Quick Overview Metric Cards -->
+      <div class="hero-stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon-wrapper">📊</div>
+          <div class="stat-content">
+            <span class="stat-value">85%</span>
+            <span class="stat-label">Overall Attendance</span>
+          </div>
+        </div>
+        
+        <div class="stat-card">
+          <div class="stat-icon-wrapper accent">⭐</div>
+          <div class="stat-content">
+            <span class="stat-value">8.2</span>
+            <span class="stat-label">Current SGPA</span>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon-wrapper">💳</div>
+          <div class="stat-content">
+            <span class="stat-value">₹30,000</span>
+            <span class="stat-label">Term Due Fees</span>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon-wrapper">📅</div>
+          <div class="stat-content">
+            <span class="stat-value">10 Aug</span>
+            <span class="stat-label">Next Exam Date</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Practical 4: Interactive Image & Content Slider -->
+    <section class="slider-section" aria-label="Campus Highlights Slider">
+      <div class="slider-container" id="slider-container" tabindex="0">
+        <div class="slider-track" id="slider-track">
+          
+          <!-- Slide 1 -->
+          <div class="slider-slide active">
+            <span class="slide-tag">Campus Overview</span>
+            <h3>🎓 Welcome to StudentHub 2026</h3>
+            <p>Your unified digital academic companion for tracking attendance, semester timetables, examination grades, and fee payments in real-time.</p>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="slider-slide">
+            <span class="slide-tag">Tech & Innovation</span>
+            <h3>💻 CHARUSAT Hackathon & Tech Fest 2026</h3>
+            <p>Annual national-level software hackathon is scheduled for next month. Register your development teams before July 30th!</p>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="slider-slide">
+            <span class="slide-tag">Examination</span>
+            <h3>📅 Semester 4 Examination Schedule Released</h3>
+            <p>The mid-semester examination timetable has been officially published. Check the Exams section for subject slots and dates.</p>
+          </div>
+
+          <!-- Slide 4 -->
+          <div class="slider-slide">
+            <span class="slide-tag">E-Library</span>
+            <h3>📚 Digital Library & Research Journal Access</h3>
+            <p>Access thousands of research papers, IEEE journals, ACM publications, and lecture notes directly through your student credentials.</p>
+          </div>
+
+        </div>
+
+        <!-- Previous & Next Slider Controls -->
+        <button class="slider-btn prev-btn" id="slider-prev" aria-label="Previous Slide">&lang;</button>
+        <button class="slider-btn next-btn" id="slider-next" aria-label="Next Slide">&rang;</button>
+
+        <!-- Slider Footer with Dots Navigation and Counter -->
+        <div class="slider-footer">
+          <div class="slider-dots" id="slider-dots"></div>
+          <span class="slide-counter" id="slide-counter">Slide 1 of 4</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Academic Quick Modules Section -->
+    <section class="portal-modules-section">
+      <div class="section-title-wrap">
+        <h2>⚡ Quick Academic Modules</h2>
+        <p>Jump directly to your academic information and tools</p>
+      </div>
+
+      <div class="modules-grid">
+        <a href="./attendance.html" class="module-card">
+          <div class="module-icon">📊</div>
+          <h3>Attendance Record</h3>
+          <p>View subject-wise attendance percentages and eligibility criteria.</p>
+          <span class="module-link-text">View Details &rarr;</span>
+        </a>
+
+        <a href="./timetable.html" class="module-card">
+          <div class="module-icon">🗓️</div>
+          <h3>Weekly Timetable</h3>
+          <p>Check daily classroom lectures, practical lab sessions, and seminars.</p>
+          <span class="module-link-text">View Timetable &rarr;</span>
+        </a>
+
+        <a href="./fees.html" class="module-card">
+          <div class="module-icon">💳</div>
+          <h3>Fees & Payments</h3>
+          <p>Track term tuition fees, verify transactions, and check due dates.</p>
+          <span class="module-link-text">Check Fees &rarr;</span>
+        </a>
+
+        <a href="./announcement.html" class="module-card">
+          <div class="module-icon">📢</div>
+          <h3>Announcements</h3>
+          <p>Official university circulars, academic notices, and competition alerts.</p>
+          <span class="module-link-text">Read Notices &rarr;</span>
+        </a>
+
+        <a href="./assignment.html" class="module-card">
+          <div class="module-icon">📝</div>
+          <h3>Assignments</h3>
+          <p>Review lab practicals, submissions, and course project deadlines.</p>
+          <span class="module-link-text">View Assignments &rarr;</span>
+        </a>
+
+        <a href="./exam.html" class="module-card">
+          <div class="module-icon">📅</div>
+          <h3>Exam Schedule</h3>
+          <p>Mid-term and end-semester examination dates, times, and venues.</p>
+          <span class="module-link-text">View Schedule &rarr;</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Practical 4: Collapsible FAQ Section -->
+    <section class="faq-section" aria-label="Frequently Asked Questions">
+      <div class="section-title-wrap">
+        <h2>❓ Frequently Asked Questions</h2>
+        <p>Common questions about using the StudentHub portal</p>
+      </div>
+
+      <div class="faq-container" id="faq-section">
+        
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-home-1">
+            <span>How is my attendance percentage calculated?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer" id="faq-home-1" role="region">
+            <div class="faq-answer-inner">
+              <p>Faculty members log daily attendance after each lecture or practical session. Your overall percentage is calculated in real time as <code>(Classes Attended / Total Classes) &times; 100</code>. A minimum of 80% is required for exam eligibility.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-home-2">
+            <span>Where can I find my upcoming examination dates?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer" id="faq-home-2" role="region">
+            <div class="faq-answer-inner">
+              <p>Navigate to the <strong>Exams</strong> section from the top navigation or quick module cards to view subject codes, dates, and morning/afternoon time slots.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-home-3">
+            <span>How do I switch between Light and Dark themes?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer" id="faq-home-3" role="region">
+            <div class="faq-answer-inner">
+              <p>Click the <strong>Theme Switcher button (🌙 / ☀️)</strong> at the top right of the navigation header on any page, or select your preference in the <strong>Settings</strong> page. Your choice is automatically remembered in your browser's <code>localStorage</code>.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-home-4">
+            <span>How do I pay semester fees online?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer" id="faq-home-4" role="region">
+            <div class="faq-answer-inner">
+              <p>Visit the <strong>Fees</strong> page to view your total semester dues, current paid balance, and upcoming deadline. Payments can be completed online via NetBanking or UPI.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
   </main>
 
-  <footer>
-    <p>&copy; 2026 Student Hub Portal</p>
+  <!-- Practical 4: Modal Popup Dialog Component -->
+  <div id="portal-modal" class="modal-backdrop" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 id="modal-title">🎓 StudentHub Portal Quick Guide</h3>
+        <button class="modal-close-btn" id="modal-close-btn" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body" id="modal-body">
+        <p><strong>Welcome to StudentHub!</strong> Here are essential instructions for using your student account:</p>
+        <ul>
+          <li><strong>Attendance Rule:</strong> 80% minimum attendance is strictly required in all subjects to download exam admit cards.</li>
+          <li><strong>Timetable & Lectures:</strong> Check your weekly schedule daily for classroom slots and lab allocations.</li>
+          <li><strong>Fee Payment:</strong> Semester dues must be cleared by 30th August 2026. Online receipt is generated instantly.</li>
+          <li><strong>Theme Preference:</strong> The portal supports both Light and Dark themes with persistent <code>localStorage</code> memory.</li>
+        </ul>
+        <p>For technical support, reach out to the university IT desk via the Contact Us page.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary modal-cancel-btn" id="modal-cancel-btn">Close</button>
+        <button type="button" class="btn btn-primary modal-btn-primary" id="modal-confirm-btn" data-modal-close>Got it, thanks!</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Unified Footer -->
+  <footer class="portal-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <h4><img src="../for_css/extra/favicon.svg" alt="" style="height: 24px; width: 24px; display: inline-block; vertical-align: middle;"> StudentHub</h4>
+        <p>Charotar University of Science and Technology (CHARUSAT) — Smart digital student academic portal.</p>
+      </div>
+
+      <div class="footer-col">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="./home.html">Home</a></li>
+          <li><a href="./dashboard.html">Dashboard</a></li>
+          <li><a href="./attendance.html">Attendance</a></li>
+          <li><a href="./timetable.html">Timetable</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Academics</h5>
+        <ul>
+          <li><a href="./fees.html">Fees Status</a></li>
+          <li><a href="./announcement.html">Announcements</a></li>
+          <li><a href="./assignment.html">Assignments</a></li>
+          <li><a href="./exam.html">Exams</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Account & Help</h5>
+        <ul>
+          <li><a href="./profile.html">Student Profile</a></li>
+          <li><a href="./aboutus.html">About Portal</a></li>
+          <li><a href="./contact.html">Contact Support</a></li>
+          <li><a href="./settings.html">Settings</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 StudentHub Portal. All rights reserved.</p>
+      <p>Department of Computer Engineering | CHARUSAT</p>
+    </div>
   </footer>
+
+  <!-- Practical 4 JavaScript Modules -->
+  <script src="../javascript/theme.js"></script>
+  <script src="../javascript/navigation.js"></script>
+  <script src="../javascript/notification.js"></script>
+  <script src="../javascript/faq.js"></script>
+  <script src="../javascript/modal.js"></script>
+  <script src="../javascript/slider.js"></script>
+  <script src="../javascript/main.js"></script>
 </body>
 </html>

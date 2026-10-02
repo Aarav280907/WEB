@@ -3,92 +3,201 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Timetable - Student Hub Portal</title>
+  <title>Weekly Timetable - StudentHub Portal</title>
+  <link rel="icon" type="image/svg+xml" href="../for_css/extra/favicon.svg">
   <link rel="stylesheet" href="../for_css/common.css">
   <link rel="stylesheet" href="../for_css/timetable.css">
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
   <header>
-    <h1>Student Hub Portal</h1>
-    <nav>
-      <a href="./home.html">Home</a>
-      <a href="./dashboard.html">Dashboard</a>
-      <a href="./profile.html">Profile</a>
-      <a href="./contact.html">Contact Us</a>
-      <a href="./settings.html">Settings</a>
-      <a href="./index.html">Logout</a>
-    </nav>
+    <div class="header-inner">
+      <a href="./home.html" class="header-brand-link" aria-label="StudentHub Home">
+        <img src="../for_css/extra/logo.svg" alt="StudentHub Logo" class="portal-logo">
+      </a>
+      
+      <div class="header-actions">
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark/light theme" title="Toggle Theme">
+          <span class="theme-icon" id="theme-icon">🌙</span>
+          <span class="theme-text" id="theme-text">Dark</span>
+        </button>
+
+        <button id="hamburger-btn" class="hamburger-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="header-inner" style="padding-top: 0; padding-bottom: 8px;">
+      <nav aria-label="Primary Navigation">
+        <a href="./home.html">🏠 Home</a>
+        <a href="./dashboard.html">📊 Dashboard</a>
+        <a href="./attendance.html">📈 Attendance</a>
+        <a href="./timetable.html" class="active">🗓️ Timetable</a>
+        <a href="./fees.html">💳 Fees</a>
+        <a href="./announcement.html">📢 Announcements</a>
+        <a href="./assignment.html">📝 Assignments</a>
+        <a href="./exam.html">📅 Exams</a>
+        <a href="./profile.html">👤 Profile</a>
+        <a href="./aboutus.html">ℹ️ About Us</a>
+        <a href="./contact.html">📞 Contact</a>
+        <a href="./settings.html">⚙️ Settings</a>
+        <a href="./index.html">🚪 Logout</a>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <h2>Weekly Timetable</h2>
-    <table class="timetable">
-      <thead>
-        <tr>
-          <th>Day</th>
-          <th>9:00 - 10:00</th>
-          <th>10:00 - 11:00</th>
-          <th>11:00 - 12:00</th>
-          <th>1:00 - 2:00</th>
-          <th>2:00 - 3:00</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Monday</td>
-          <td>Web Development</td>
-          <td>Data Structures</td>
-          <td>Database Systems</td>
-          <td>Maths</td>
-          <td>Elective</td>
-        </tr>
-        <tr>
-          <td>Tuesday</td>
-          <td>Operating Systems</td>
-          <td>Computer Networks</td>
-          <td>Web Development</td>
-          <td>Elective</td>
-          <td>Maths</td>
-        </tr>
-        <tr>
-          <td>Wednesday</td>
-          <td>Data Structures</td>
-          <td>Database Systems</td>
-          <td>Operating Systems</td>
-          <td>Computer Networks</td>
-          <td>Elective</td>
-        </tr>
-        <tr>
-          <td>Thursday</td>
-          <td>Web Development</td>
-          <td>Maths</td>
-          <td>Database Systems</td>
-          <td>Operating Systems</td>
-          <td>Computer Networks</td>
-        </tr>
-        <tr>
-          <td>Friday</td>
-          <td>Elective</td>
-          <td>Web Development</td>
-          <td>Data Structures</td>
-          <td>Database Systems</td>
-          <td>Maths</td>
-        </tr>
-        <tr>
-          <td>Saturday</td>
-          <td>Computer Networks</td>
-          <td>Operating Systems</td>
-          <td>Elective</td>
-          <td>Web Development</td>
-          <td>Seminar</td>
-        </tr>
-      </tbody>
-    </table>
+  <main id="main-content" class="timetable-main">
+    <div class="portal-page-header">
+      <div class="header-info">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="./home.html">Home</a>
+          <span class="breadcrumb-separator">/</span>
+          <span>Timetable</span>
+        </nav>
+        <h2>🗓️ Weekly Class Timetable</h2>
+        <p>Semester 3 (Academic Year 2026-27) — Class Room & Lab Session Schedule.</p>
+      </div>
+
+      <div class="header-actions">
+        <span class="badge badge-info" style="padding: 8px 14px; font-size: 0.85rem;">B.Tech CE — Batch 2026</span>
+      </div>
+    </div>
+
+    <!-- Timetable Table Card -->
+    <section class="card">
+      <div class="card-header">
+        <div class="card-title">
+          <span>⏰</span> Class Schedule (Monday – Saturday)
+        </div>
+        <span class="timetable-note">Lunch Break: 12:00 PM – 1:00 PM</span>
+      </div>
+
+      <div class="table-responsive">
+        <table class="timetable-table">
+          <thead>
+            <tr>
+              <th style="min-width: 120px;">Day</th>
+              <th>9:00 – 10:00 AM</th>
+              <th>10:00 – 11:00 AM</th>
+              <th>11:00 – 12:00 PM</th>
+              <th>1:00 – 2:00 PM</th>
+              <th>2:00 – 3:00 PM</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="day-col"><strong>Monday</strong></td>
+              <td><span class="slot-pill web">Web Development</span></td>
+              <td><span class="slot-pill dsa">Data Structures</span></td>
+              <td><span class="slot-pill db">Database Systems</span></td>
+              <td><span class="slot-pill math">Maths</span></td>
+              <td><span class="slot-pill elective">Elective</span></td>
+            </tr>
+
+            <tr>
+              <td class="day-col"><strong>Tuesday</strong></td>
+              <td><span class="slot-pill os">Operating Systems</span></td>
+              <td><span class="slot-pill cn">Computer Networks</span></td>
+              <td><span class="slot-pill web">Web Development</span></td>
+              <td><span class="slot-pill elective">Elective</span></td>
+              <td><span class="slot-pill math">Maths</span></td>
+            </tr>
+
+            <tr>
+              <td class="day-col"><strong>Wednesday</strong></td>
+              <td><span class="slot-pill dsa">Data Structures</span></td>
+              <td><span class="slot-pill db">Database Systems</span></td>
+              <td><span class="slot-pill os">Operating Systems</span></td>
+              <td><span class="slot-pill cn">Computer Networks</span></td>
+              <td><span class="slot-pill elective">Elective</span></td>
+            </tr>
+
+            <tr>
+              <td class="day-col"><strong>Thursday</strong></td>
+              <td><span class="slot-pill web">Web Development</span></td>
+              <td><span class="slot-pill math">Maths</span></td>
+              <td><span class="slot-pill db">Database Systems</span></td>
+              <td><span class="slot-pill os">Operating Systems</span></td>
+              <td><span class="slot-pill cn">Computer Networks</span></td>
+            </tr>
+
+            <tr>
+              <td class="day-col"><strong>Friday</strong></td>
+              <td><span class="slot-pill elective">Elective</span></td>
+              <td><span class="slot-pill web">Web Development</span></td>
+              <td><span class="slot-pill dsa">Data Structures</span></td>
+              <td><span class="slot-pill db">Database Systems</span></td>
+              <td><span class="slot-pill math">Maths</span></td>
+            </tr>
+
+            <tr>
+              <td class="day-col"><strong>Saturday</strong></td>
+              <td><span class="slot-pill cn">Computer Networks</span></td>
+              <td><span class="slot-pill os">Operating Systems</span></td>
+              <td><span class="slot-pill elective">Elective</span></td>
+              <td><span class="slot-pill web">Web Development</span></td>
+              <td><span class="slot-pill seminar">Seminar</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
   </main>
 
-  <footer>
-    <p>&copy; 2026 Student Hub Portal. All rights reserved.</p>
+  <footer class="portal-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <h4><img src="../for_css/extra/favicon.svg" alt="" style="height: 24px; width: 24px; display: inline-block; vertical-align: middle;"> StudentHub</h4>
+        <p>Charotar University of Science and Technology (CHARUSAT) — Smart digital student academic portal.</p>
+      </div>
+
+      <div class="footer-col">
+        <h5>Navigation</h5>
+        <ul>
+          <li><a href="./home.html">Home</a></li>
+          <li><a href="./dashboard.html">Dashboard</a></li>
+          <li><a href="./attendance.html">Attendance</a></li>
+          <li><a href="./timetable.html">Timetable</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Academics</h5>
+        <ul>
+          <li><a href="./fees.html">Fees Status</a></li>
+          <li><a href="./announcement.html">Announcements</a></li>
+          <li><a href="./assignment.html">Assignments</a></li>
+          <li><a href="./exam.html">Exams</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Student Support</h5>
+        <ul>
+          <li><a href="./profile.html">Student Profile</a></li>
+          <li><a href="./aboutus.html">About Portal</a></li>
+          <li><a href="./contact.html">Contact Us</a></li>
+          <li><a href="./settings.html">Settings</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 StudentHub Portal. All rights reserved.</p>
+      <p>Department of Computer Engineering | CHARUSAT</p>
+    </div>
   </footer>
+
+  <script src="../javascript/theme.js"></script>
+  <script src="../javascript/navigation.js"></script>
+  <script src="../javascript/notification.js"></script>
+  <script src="../javascript/faq.js"></script>
+  <script src="../javascript/modal.js"></script>
+  <script src="../javascript/slider.js"></script>
+  <script src="../javascript/main.js"></script>
 </body>
 </html>
-

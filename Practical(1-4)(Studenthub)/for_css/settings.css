@@ -1,52 +1,71 @@
-footer {
-  background: #065f46;
-  color: #fff;
-  text-align: center;
-  padding: 15px;
-  margin-top: 40px;
+/* ==========================================================================
+   StudentHub - Settings Page Styles
+   ========================================================================== */
+
+.settings-main {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
 }
 
-footer p {
-  margin: 0;
-}
-main {
-  max-width: 800px;
-  margin: 40px auto;
-  background: #fff;
-  padding: 25px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+.settings-layout-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
 }
 
-main h2 {
-  color: #065f46;
-  text-align: center;
-  margin-bottom: 20px;
+.setting-item-block {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border-color);
 }
 
-.account-settings,
-.preferences {
-  margin-top: 20px;
+.setting-item-block:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
-.account-settings h3,
-.preferences h3 {
-  color: #065f46;
-  margin-bottom: 10px;
+.setting-hint {
+    color: var(--text-faint);
+    font-size: 0.8rem;
+    line-height: 1.4;
 }
 
-.account-settings ul {
-  list-style: none;
-  padding-left: 0;
+.account-options-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
-.account-settings li {
-  margin-bottom: 8px;
+.account-opt-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 16px;
+    background: var(--bg-subsurface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
 }
 
-.preferences form {
-  max-width: 100%;
-  background: transparent;
-  box-shadow: none;
-  padding: 0;
+.account-opt-item strong {
+    color: var(--text-main);
+    display: block;
+    margin-bottom: 2px;
+}
+
+.account-opt-item p {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+}
+
+@media (max-width: 600px) {
+    .account-opt-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }

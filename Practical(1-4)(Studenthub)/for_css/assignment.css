@@ -1,54 +1,76 @@
-footer {
-  background: #065f46;
-  color: #fff;
-  text-align: center;
-  padding: 15px;
-  margin-top: 40px;
+/* ==========================================================================
+   StudentHub - Assignment Page Styles
+   ========================================================================== */
+
+.assignment-main {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
 }
 
-footer p {
-  margin: 0;
-}
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #f1f5f9;
-  color: #1e293b;
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
+.assignment-cards-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
 }
 
-.content {
-  max-width: 800px;
-  margin: 40px auto;
-  background: #fff;
-  padding: 25px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+.assignment-card {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
-.content h1 {
-  color: #065f46;
-  text-align: center;
-  margin-bottom: 20px;
+.assignment-header-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
 }
 
-.content h2 {
-  color: #1e293b;
-  margin-top: 20px;
+.assignment-title-wrap {
+    display: flex;
+    align-items: center;
+    gap: 14px;
 }
 
-.content p {
-  color: #475569;
-  line-height: 1.6;
+.practical-num-badge {
+    background: var(--bg-subsurface);
+    color: var(--primary);
+    border: 1.5px solid var(--border-color);
+    font-size: 1.1rem;
+    font-weight: 800;
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
 }
 
-.content ul {
-  list-style-type: square;
-  padding-left: 20px;
+body.dark-theme .practical-num-badge {
+    color: var(--primary-light);
 }
 
-.content ul li {
-  margin-bottom: 8px;
-  color: #334155;
+.assignment-title-wrap h3 {
+    font-size: 1.15rem;
+    margin-bottom: 2px;
+    color: var(--text-main);
+}
+
+.course-name {
+    font-size: 0.82rem;
+    color: var(--text-faint);
+    font-weight: 600;
+}
+
+.assignment-footer-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border-color);
+    font-size: 0.85rem;
+    color: var(--text-muted);
 }

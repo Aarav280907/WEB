@@ -1,51 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Announcements</title>
-    <link rel="stylesheet" href="../for_css/common.css">
-    <link rel="stylesheet" href="../for_css/announcement.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>University Announcements - StudentHub Portal</title>
+  <link rel="icon" type="image/svg+xml" href="../for_css/extra/favicon.svg">
+  <link rel="stylesheet" href="../for_css/common.css">
+  <link rel="stylesheet" href="../for_css/announcement.css">
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
-  <header>
-    <h1>Student Hub Portal</h1>
-    <nav>
-      <a href="./home.html">Home</a>
-      <a href="./dashboard.html">Dashboard</a>
-      <a href="./profile.html">Profile</a>
-      <a href="./contact.html">Contact Us</a>
-      <a href="./settings.html">Settings</a>
-      <a href="./index.html">Logout</a>
-    </nav>
-  </header>
-    <div class="auth messanger">
-        <h2>Announcements</h2>
-        <div class="announcement-box">
-            <h3>Announcement 1</h3>
-            <p>This is first announcement.</p>
-        </div>
-        <div class="announcement-box">
-            <h3>Announcement 2</h3>
-            <p>This is second announcement.</p>
-        </div>
-        <div class="announcement-box">
-            <h3>Announcement 3</h3>
-            <p>This is third announcement.</p>
-        </div>
-        <div class="announcement-box">
-            <h3>Announcement 4</h3>
-            <p>This is fourth announcement.</p>
-        </div>
+  <!-- Notification Banner -->
+  <div id="notification-banner" class="notification-banner" role="alert" aria-live="polite">
+    <div class="banner-content">
+      <span class="banner-icon" id="banner-icon">📢</span>
+      <span id="banner-text">Attention: Campus recruitment drive and internship registration forms are now open.</span>
     </div>
-    <footer>
-    <h2>Contact Us</h2>
-    <p>You can reach us at: 
-      <a href="mailto:25dce072@charusat.edu.in">25dce072@charusat.edu.in</a>
-    </p>
-  </footer>
-    
+    <button id="banner-close-btn" class="banner-close-btn" aria-label="Dismiss announcement">&times;</button>
+  </div>
 
+  <!-- Header -->
+  <header>
+    <div class="header-inner">
+      <a href="./home.html" class="header-brand-link" aria-label="StudentHub Home">
+        <img src="../for_css/extra/logo.svg" alt="StudentHub Logo" class="portal-logo">
+      </a>
+      
+      <div class="header-actions">
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark/light theme" title="Toggle Theme">
+          <span class="theme-icon" id="theme-icon">🌙</span>
+          <span class="theme-text" id="theme-text">Dark</span>
+        </button>
+
+        <button id="hamburger-btn" class="hamburger-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="header-inner" style="padding-top: 0; padding-bottom: 8px;">
+      <nav aria-label="Primary Navigation">
+        <a href="./home.html">🏠 Home</a>
+        <a href="./dashboard.html">📊 Dashboard</a>
+        <a href="./attendance.html">📈 Attendance</a>
+        <a href="./timetable.html">🗓️ Timetable</a>
+        <a href="./fees.html">💳 Fees</a>
+        <a href="./announcement.html" class="active">📢 Announcements</a>
+        <a href="./assignment.html">📝 Assignments</a>
+        <a href="./exam.html">📅 Exams</a>
+        <a href="./profile.html">👤 Profile</a>
+        <a href="./aboutus.html">ℹ️ About Us</a>
+        <a href="./contact.html">📞 Contact</a>
+        <a href="./settings.html">⚙️ Settings</a>
+        <a href="./index.html">🚪 Logout</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="announcement-main">
+    <div class="portal-page-header">
+      <div class="header-info">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="./home.html">Home</a>
+          <span class="breadcrumb-separator">/</span>
+          <span>Announcements</span>
+        </nav>
+        <h2>📢 Official Campus Announcements</h2>
+        <p>Verified university circulars, academic notices, and competition alerts.</p>
+      </div>
+
+      <div class="header-actions">
+        <button class="btn btn-primary open-modal-btn" data-modal-target="announcement-modal">
+          💡 Announcement Policies
+        </button>
+      </div>
+    </div>
+
+    <!-- Announcement Cards Feed -->
+    <section class="announcement-feed" aria-label="Campus Circulars Feed">
+      <!-- Announcement 1 -->
+      <article class="card announcement-card">
+        <div class="announcement-header">
+          <div class="announcement-meta">
+            <span class="badge badge-info">Examination</span>
+            <span class="announcement-date">📅 15 July 2026</span>
+          </div>
+          <h3>Mid-Semester Examination Schedule Released</h3>
+        </div>
+        <p>The mid-semester examination timetable for all Bachelor of Technology (B.Tech) engineering branches has been officially published. Students can view room allocations, subject codes, and timing slots under the Exams section.</p>
+        <div class="announcement-footer">
+          <span class="announcement-author">🏛️ Office of the Controller of Examinations</span>
+          <a href="./exam.html" class="btn btn-sm btn-outline">View Exam Timetable &rarr;</a>
+        </div>
+      </article>
+
+      <!-- Announcement 2 -->
+      <article class="card announcement-card">
+        <div class="announcement-header">
+          <div class="announcement-meta">
+            <span class="badge badge-success">Tech Fest</span>
+            <span class="announcement-date">📅 12 July 2026</span>
+          </div>
+          <h3>CHARUSAT Tech Fest & Coding Hackathon 2026</h3>
+        </div>
+        <p>Registrations for the Annual University Hackathon 2026 are open till July 30. Compete against top engineering teams across the state. Exciting prizes, certificates, and direct industry internship mentorship opportunities await!</p>
+        <div class="announcement-footer">
+          <span class="announcement-author">💻 Department of Computer Engineering</span>
+          <a href="#" onclick="alert('Registration link: Team submission form open on portal.'); return false;" class="btn btn-sm btn-outline">Register Team &rarr;</a>
+        </div>
+      </article>
+
+      <!-- Announcement 3 -->
+      <article class="card announcement-card">
+        <div class="announcement-header">
+          <div class="announcement-meta">
+            <span class="badge badge-warning">Finance & Fees</span>
+            <span class="announcement-date">📅 08 July 2026</span>
+          </div>
+          <h3>Semester 3 Term 2 Fee Payment Deadline</h3>
+        </div>
+        <p>All enrolled students are requested to complete their semester tuition fee installments by 30th August 2026 to ensure uninterrupted access to exam hall tickets and laboratory practical sessions.</p>
+        <div class="announcement-footer">
+          <span class="announcement-author">💳 University Accounts & Finance Section</span>
+          <a href="./fees.html" class="btn btn-sm btn-outline">Check Fee Dues &rarr;</a>
+        </div>
+      </article>
+
+      <!-- Announcement 4 -->
+      <article class="card announcement-card">
+        <div class="announcement-header">
+          <div class="announcement-meta">
+            <span class="badge badge-neutral">Library</span>
+            <span class="announcement-date">📅 01 July 2026</span>
+          </div>
+          <h3>Digital Library & IEEE Resource Subscriptions Expanded</h3>
+        </div>
+        <p>New academic subscriptions to IEEE Xplore, ACM Digital Library, and Springer Nature journals have been integrated into the student digital repository. Access is available 24/7 on campus and through remote student credentials.</p>
+        <div class="announcement-footer">
+          <span class="announcement-author">📚 Central University Library</span>
+          <a href="#" onclick="alert('Redirecting to CHARUSAT E-Library Portal...'); return false;" class="btn btn-sm btn-outline">Access Library &rarr;</a>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <!-- Modal Component -->
+  <div id="announcement-modal" class="modal-backdrop" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 id="modal-title">📋 Announcement Verification Policy</h3>
+        <button class="modal-close-btn" id="modal-close-btn" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p>All circulars and notices posted on the StudentHub portal are verified by the Dean of Academic Affairs and Department Heads.</p>
+        <ul>
+          <li><strong>Official Authenticity:</strong> All notices posted here have official approval from the university registrar.</li>
+          <li><strong>Inquiries:</strong> For inquiries regarding specific circulars, reach out to your faculty advisor or the department office.</li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-modal-close>Understood</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="portal-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <h4><img src="../for_css/extra/favicon.svg" alt="" style="height: 24px; width: 24px; display: inline-block; vertical-align: middle;"> StudentHub</h4>
+        <p>Charotar University of Science and Technology (CHARUSAT) — Smart digital student academic portal.</p>
+      </div>
+
+      <div class="footer-col">
+        <h5>Navigation</h5>
+        <ul>
+          <li><a href="./home.html">Home</a></li>
+          <li><a href="./dashboard.html">Dashboard</a></li>
+          <li><a href="./attendance.html">Attendance</a></li>
+          <li><a href="./timetable.html">Timetable</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Academics</h5>
+        <ul>
+          <li><a href="./fees.html">Fees Status</a></li>
+          <li><a href="./announcement.html">Announcements</a></li>
+          <li><a href="./assignment.html">Assignments</a></li>
+          <li><a href="./exam.html">Exams</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Student Support</h5>
+        <ul>
+          <li><a href="./profile.html">Student Profile</a></li>
+          <li><a href="./aboutus.html">About Portal</a></li>
+          <li><a href="./contact.html">Contact Us</a></li>
+          <li><a href="./settings.html">Settings</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 StudentHub Portal. All rights reserved.</p>
+      <p>Department of Computer Engineering | CHARUSAT</p>
+    </div>
+  </footer>
+
+  <script src="../javascript/theme.js"></script>
+  <script src="../javascript/navigation.js"></script>
+  <script src="../javascript/notification.js"></script>
+  <script src="../javascript/faq.js"></script>
+  <script src="../javascript/modal.js"></script>
+  <script src="../javascript/slider.js"></script>
+  <script src="../javascript/main.js"></script>
 </body>
 </html>
