@@ -1,20 +1,18 @@
 /**
  * StudentHub Portal - Main Application JavaScript
- * Practical 4: JavaScript, DOM Manipulation, Event Handling, and UI Interactivity
- * 
  * Central controller that initializes:
  * 1. Theme Switcher (Light/Dark mode & localStorage persistence)
  * 2. Mobile Navigation & Hamburger Menu
  * 3. Dynamic Notification Banner
- * 4. Collapsible FAQ Accordion
+ * 4. Collapsible FAQ Accordion & Dynamic JSON Loader (faqs.json)
  * 5. Interactive Modal Popup Dialogs
  * 6. Responsive Image/Content Slider
  * 7. Dynamic Greeting and Live Time Utility
+ * 8. Dynamic Campus Events & Circulars (events.json)
+ * 9. Dynamic Student Directory & Profiles (students.json)
  */
 
 document.addEventListener('DOMContentLoaded', function () {
-  console.log('🚀 StudentHub Portal - Practical 4 Interactive Features Initializing...');
-
   // 1. Initialize Light/Dark Theme & LocalStorage
   if (window.StudentHubTheme && typeof window.StudentHubTheme.init === 'function') {
     window.StudentHubTheme.init();
@@ -30,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
     window.StudentHubNotification.init();
   }
 
-  // 4. Initialize FAQ Accordion
+  // 4. Initialize FAQ Module (faqs.json)
   if (window.StudentHubFAQ && typeof window.StudentHubFAQ.init === 'function') {
     window.StudentHubFAQ.init();
   }
@@ -45,7 +43,17 @@ document.addEventListener('DOMContentLoaded', function () {
     window.StudentHubSlider.init();
   }
 
-  // 7. Dynamic Student Greeting (Demonstrating getElementById & textContent)
+  // 7. Dynamic Campus Events Module (events.json)
+  if (window.StudentHubEvents && typeof window.StudentHubEvents.init === 'function') {
+    window.StudentHubEvents.init();
+  }
+
+  // 8. Dynamic Student Profiles Module (students.json)
+  if (window.StudentHubStudents && typeof window.StudentHubStudents.init === 'function') {
+    window.StudentHubStudents.init();
+  }
+
+  // 9. Dynamic Student Greeting
   const greetingElement = document.getElementById('dynamic-greeting');
   if (greetingElement) {
     const currentHour = new Date().getHours();
@@ -60,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function () {
     greetingElement.textContent = `${greetingText}, Aarav!`;
   }
 
-  // 8. Dynamic Notification Demo Buttons (if present on page)
+  // 10. Dynamic Notification Demo Buttons
   const alertDemoBtn = document.getElementById('trigger-alert-btn');
   if (alertDemoBtn) {
     alertDemoBtn.addEventListener('click', function () {
@@ -69,6 +77,4 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   }
-
-  console.log('✅ StudentHub Practical 4 interactive components loaded successfully.');
 });

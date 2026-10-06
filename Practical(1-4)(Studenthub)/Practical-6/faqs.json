@@ -1,0 +1,128 @@
+[
+  {
+    "id": 1,
+    "category": "General",
+    "question": "What is the StudentHub Portal?",
+    "answer": "StudentHub is an online centralized student academic portal developed for CHARUSAT students to track attendance percentages, class timetables, fee transactions, exam schedules, and official university announcements in real time.",
+    "keywords": "studenthub portal about system charusat overview"
+  },
+  {
+    "id": 2,
+    "category": "Attendance",
+    "question": "How is my attendance percentage calculated and updated?",
+    "answer": "Subject faculty members record lecture and practical attendance daily after each session. The portal calculates overall percentage as (Attended Sessions / Total Conducted Sessions) * 100. A minimum of 80% attendance is required for exam eligibility.",
+    "keywords": "attendance calculate percentage daily update 80 percent minimum"
+  },
+  {
+    "id": 3,
+    "category": "Portal & IT",
+    "question": "How do I switch between Light and Dark mode?",
+    "answer": "You can toggle the theme anytime by clicking the Theme Switcher button (🌙 / ☀️) in the top-right header of any page or selecting your preferred theme in Settings. Your preference is automatically saved in your browser session.",
+    "keywords": "dark mode light theme switcher toggle preference settings"
+  },
+  {
+    "id": 4,
+    "category": "Exams",
+    "question": "Where can I find mid-term and end-semester examination timetables?",
+    "answer": "Navigate to the Exams section or Announcements from the top navigation bar to view detailed exam schedules, subject codes, date sheets, session timings, and room allocations.",
+    "keywords": "exam examination timetable date sheet mid term end semester schedule"
+  },
+  {
+    "id": 5,
+    "category": "Portal & IT",
+    "question": "What should I do if I forget my student account password?",
+    "answer": "Click the 'Forgot Password' link on the login page to receive a password reset link on your registered student email address, or contact the university IT helpdesk at studenthub@charusat.edu.in.",
+    "keywords": "forgot password reset login account credentials it helpdesk"
+  },
+  {
+    "id": 6,
+    "category": "Fees",
+    "question": "How can I pay semester tuition fees and download payment receipts?",
+    "answer": "Visit the Fees page to view your total semester dues, installment schedule, and due dates. Payments can be processed online via Net Banking, Debit/Credit cards, or UPI. Instant official e-receipts are generated upon successful payment.",
+    "keywords": "fee fees payment receipt dues online netbanking upi installment"
+  },
+  {
+    "id": 7,
+    "category": "Attendance",
+    "question": "What happens if my attendance falls below the mandatory 80% cutoff?",
+    "answer": "If attendance drops below 80%, the system flags a warning badge. Students falling below the mandatory threshold must submit official medical or OD certificates to their faculty advisor and Head of Department to obtain exam hall ticket clearance.",
+    "keywords": "attendance below 80 cutoff warning medical certificate hall ticket"
+  },
+  {
+    "id": 8,
+    "category": "Exams",
+    "question": "When are semester grade reports and SGPA results published?",
+    "answer": "End-semester results and SGPA/CGPA grade cards are typically announced within 3-4 weeks following the conclusion of examinations. Results can be viewed directly on the Dashboard and Profile pages.",
+    "keywords": "results sgpa cgpa grades grade card mark sheet announcement"
+  },
+  {
+    "id": 9,
+    "category": "General",
+    "question": "How do I submit practical assignments and lab coursework?",
+    "answer": "Go to the Assignments section to view active laboratory practical tasks, deadline dates, submission guidelines, and upload links for your weekly lab code and documentation.",
+    "keywords": "assignments practicals submission lab journal deadline upload"
+  },
+  {
+    "id": 10,
+    "category": "Portal & IT",
+    "question": "Is StudentHub accessible on mobile devices and tablets?",
+    "answer": "Yes, StudentHub is fully responsive across smartphones, tablets, and desktop computers. It features a collapsible hamburger menu for smooth navigation on mobile screens.",
+    "keywords": "mobile responsive tablet phone hamburger navigation layout"
+  },
+  {
+    "id": 11,
+    "category": "General",
+    "question": "Where can I access IEEE journals and university digital library resources?",
+    "answer": "Students can access digital library databases including IEEE Xplore, ACM Digital Library, and Springer Nature through campus Wi-Fi or by logging in with their university student credentials on the central library portal.",
+    "keywords": "library digital ieee acm journals books research papers"
+  },
+  {
+    "id": 12,
+    "category": "Fees",
+    "question": "Are scholarship adjustments and fee waivers reflected on the portal?",
+    "answer": "Yes, government and university merit scholarship deductions approved by the accounts office are automatically credited against your pending tuition balance and shown on the Fees breakdown page.",
+    "keywords": "scholarship fee waiver concession accounts deduction balance"
+  },
+  {
+    "id": 13,
+    "category": "Exams",
+    "question": "How do I apply for re-checking or re-assessment of exam papers?",
+    "answer": "Students can submit re-assessment requests within 7 days of result declaration through the Examination section on the portal by paying the prescribed verification fee per course.",
+    "keywords": "rechecking reassessment paper verification re-eval result"
+  },
+  {
+    "id": 14,
+    "category": "Attendance",
+    "question": "How do I apply for an On-Duty (OD) or sports event attendance leave?",
+    "answer": "Submit an OD application form endorsed by your event coordinator or club mentor to your department faculty advisor within 3 working days of the event to have attendance credited.",
+    "keywords": "on duty od leave attendance sports event club participation"
+  },
+  {
+    "id": 15,
+    "category": "General",
+    "question": "How can I register for university hackathons, tech fests, and clubs?",
+    "answer": "Check the Announcements / Events section for active registrations. Click 'Register' on the respective event card to join student clubs like GDSC, ACM, NSS, or participate in annual hackathons.",
+    "keywords": "hackathon tech fest clubs registration gdsc acm events join"
+  },
+  {
+    "id": 16,
+    "category": "Portal & IT",
+    "question": "How do I update my contact number or personal email address?",
+    "answer": "You can request profile detail updates by visiting the Settings or Profile page and submitting updated details with supporting verification documents to the administrative office.",
+    "keywords": "update profile contact phone email personal details settings"
+  },
+  {
+    "id": 17,
+    "category": "Fees",
+    "question": "What are the penalties for late fee submission after the due date?",
+    "answer": "Tuition fees paid after the specified deadline may incur a late fine of Rs. 100 per week. Extended delays may temporarily restrict exam registration and portal services.",
+    "keywords": "late fee penalty fine due date deadline overdue"
+  },
+  {
+    "id": 18,
+    "category": "General",
+    "question": "How can I contact the department academic counselor or faculty mentor?",
+    "answer": "Faculty mentor names and contact email addresses are listed under your Profile page and on the Contact Us page. You can schedule in-person meetings during official mentor hours.",
+    "keywords": "mentor counselor faculty advisor contact support advice"
+  }
+]

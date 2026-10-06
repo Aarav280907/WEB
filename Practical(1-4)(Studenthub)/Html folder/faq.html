@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us & FAQs - StudentHub Portal</title>
+  <title>Frequently Asked Questions - StudentHub Portal</title>
   <link rel="icon" type="image/svg+xml" href="../for_css/extra/favicon.svg">
   <link rel="stylesheet" href="../for_css/common.css">
   <link rel="stylesheet" href="../for_css/aboutus.css">
@@ -11,15 +11,7 @@
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
-  <!-- Notification Banner -->
-  <div id="notification-banner" class="notification-banner" role="alert" aria-live="polite">
-    <div class="banner-content">
-      <span class="banner-icon" id="banner-icon">📢</span>
-      <span id="banner-text">StudentHub Portal version 2.0 is live with enhanced interactive student services.</span>
-    </div>
-    <button id="banner-close-btn" class="banner-close-btn" aria-label="Dismiss announcement">&times;</button>
-  </div>
-
+  <!-- Header -->
   <header>
     <div class="header-inner">
       <a href="./home.html" class="header-brand-link" aria-label="StudentHub Home">
@@ -65,69 +57,19 @@
         <nav class="breadcrumb" aria-label="Breadcrumb">
           <a href="./home.html">Home</a>
           <span class="breadcrumb-separator">/</span>
-          <span>About Us</span>
+          <span>FAQs</span>
         </nav>
-        <h2>ℹ️ About StudentHub Portal & FAQs</h2>
+        <h2>❓ Frequently Asked Questions (FAQ)</h2>
         <p>Charotar University of Science and Technology (CHARUSAT) — Smart Academic Student Portal.</p>
       </div>
 
       <div class="header-actions">
-        <button class="btn btn-primary open-modal-btn" data-modal-target="about-modal">
-          💡 University Guidelines
-        </button>
+        <a href="./aboutus.html" class="btn btn-secondary">ℹ️ About Portal</a>
       </div>
     </div>
 
-    <!-- Mission & Vision Section -->
-    <section class="about-grid">
-      <div class="card mission-card">
-        <div class="card-header">
-          <div class="card-title">🎯 Our Mission</div>
-        </div>
-        <p>Our mission is to make learning, academic tracking, and university administrative tasks simple, intuitive, and accessible for every student and faculty member at CHARUSAT.</p>
-      </div>
-
-      <div class="card mission-card">
-        <div class="card-header">
-          <div class="card-title">🌐 What We Do</div>
-        </div>
-        <p>We provide a centralized digital platform to seamlessly manage attendance, timetables, coursework practicals, fee payments, and verified announcements through a responsive, modern web interface.</p>
-      </div>
-    </section>
-
-    <!-- Key Platform Highlights -->
-    <section class="card" style="margin: 10px 0;">
-      <div class="card-header">
-        <div class="card-title">✨ Portal Capabilities & Features</div>
-      </div>
-
-      <div class="features-columns">
-        <div class="feat-col">
-          <strong>📊 Real-Time Analytics</strong>
-          <p>Instant attendance tracking with minimum cutoff warnings and eligibility indicators.</p>
-        </div>
-        <div class="feat-col">
-          <strong>🗓️ Dynamic Scheduling</strong>
-          <p>Organized weekly timetables and midterm/final semester exam schedules.</p>
-        </div>
-        <div class="feat-col">
-          <strong>🌗 Dual Theme Support</strong>
-          <p>High-contrast Light and Dark mode options saved persistently in browser <code>localStorage</code>.</p>
-        </div>
-        <div class="feat-col">
-          <strong>📱 Universal Responsiveness</strong>
-          <p>Built with accessible HTML5, responsive CSS Grid/Flexbox, and mobile-friendly hamburger navigation.</p>
-        </div>
-      </div>
-    </section>
-
     <!-- Frequently Asked Questions (FAQ) with Live Search, Filter, Sort & Pagination -->
     <section class="faq-section" aria-label="Frequently Asked Questions">
-      <div class="section-title-wrap" style="text-align: left; margin-bottom: 16px;">
-        <h2>❓ Frequently Asked Questions (FAQ)</h2>
-        <p>Search questions by keyword, filter by academic topic, and click to view detailed answers.</p>
-      </div>
-
       <!-- FAQ Search & Filter Controls Card -->
       <div class="data-controls-card">
         <div class="controls-grid">
@@ -189,28 +131,6 @@
       </nav>
     </section>
   </main>
-
-  <!-- Modal Component -->
-  <div id="about-modal" class="modal-backdrop" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-    <div class="modal-dialog">
-      <div class="modal-header">
-        <h3 id="modal-title">🏛️ CHARUSAT Academic Guidelines</h3>
-        <button class="modal-close-btn" id="modal-close-btn" aria-label="Close modal">&times;</button>
-      </div>
-      <div class="modal-body">
-        <p><strong>Charotar University of Science and Technology (CHARUSAT)</strong></p>
-        <p>Faculty of Technology & Engineering (FTE) — Department of Computer Engineering</p>
-        <ul>
-          <li><strong>Academic Discipline:</strong> Maintain regular attendance above 80% and adhere strictly to coursework deadlines.</li>
-          <li><strong>Portal Security:</strong> Protect your student account credentials and log out on shared computers.</li>
-          <li><strong>Support:</strong> For questions, reach out via the official student email: <code>25dce072@charusat.edu.in</code>.</li>
-        </ul>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary" data-modal-close>Understood</button>
-      </div>
-    </div>
-  </div>
 
   <footer class="portal-footer">
     <div class="footer-inner">
