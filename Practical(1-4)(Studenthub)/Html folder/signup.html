@@ -7,6 +7,47 @@
   <link rel="icon" type="image/svg+xml" href="../for_css/extra/favicon.svg">
   <link rel="stylesheet" href="../for_css/common.css">
   <link rel="stylesheet" href="../for_css/signup.css">
+  <style>
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    @media (max-width: 600px) {
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+    }
+    .radio-group {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      margin-top: 6px;
+    }
+    .radio-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.9rem;
+      cursor: pointer;
+      color: var(--text-main);
+      font-weight: 500;
+    }
+    .checkbox-label {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.88rem;
+      cursor: pointer;
+      color: var(--text-muted);
+      margin-top: 12px;
+      line-height: 1.4;
+    }
+    .checkbox-label input[type="checkbox"] {
+      margin-top: 3px;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -27,38 +68,143 @@
   </header>
 
   <main id="main-content" class="auth-main">
-    <div class="auth-card">
+    <div class="auth-card" style="max-width: 580px;">
       <div class="auth-header">
         <img src="../for_css/extra/logo.svg" alt="StudentHub Logo" class="auth-logo">
         <h2>Create Student Account</h2>
         <p>Register with your university roll number to access the student portal</p>
       </div>
 
-      <form action="./home.html" method="get" class="auth-form">
+      <form action="../Practical-7/process_signup.php" method="POST" class="auth-form">
         <fieldset style="border: none; padding: 0; margin: 0;">
-          <legend style="display: none;">Student Registration</legend>
+          <legend style="display: none;">Student Registration Form</legend>
 
           <div class="form-group">
-            <label for="username">Student ID / Roll Number:</label>
-            <input type="text" id="username" name="username" required placeholder="e.g. 25DCE072" autocomplete="username">
+            <label for="fullname">Full Name:</label>
+            <input 
+              type="text" 
+              id="fullname" 
+              name="fullname" 
+              required 
+              placeholder="Enter full name" 
+              autocomplete="name"
+            >
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="student_id">Student ID / Roll Number:</label>
+              <input 
+                type="text" 
+                id="student_id" 
+                name="student_id" 
+                required 
+                placeholder="Enter student ID" 
+                autocomplete="username"
+              >
+            </div>
+
+            <div class="form-group">
+              <label for="mobile">Mobile Number (10 Digits):</label>
+              <input 
+                type="tel" 
+                id="mobile" 
+                name="mobile" 
+                required 
+                placeholder="Enter mobile number" 
+                autocomplete="tel"
+                maxlength="10"
+              >
+            </div>
           </div>
 
           <div class="form-group">
             <label for="email">University Email Address:</label>
-            <input type="email" id="email" name="email" required placeholder="e.g. yourname@charusat.edu.in" autocomplete="email">
+            <input 
+              type="email" 
+              id="email" 
+              name="email" 
+              required 
+              placeholder="Enter email address" 
+              autocomplete="email"
+            >
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="course">Department / Course:</label>
+              <select id="course" name="course" class="filter-select" required>
+                <option value="">-- Select Course --</option>
+                <option value="Computer Engineering">Computer Engineering</option>
+                <option value="Information Technology">Information Technology</option>
+                <option value="AI & Data Science">AI & Data Science</option>
+                <option value="Electronics & Communication">Electronics & Communication</option>
+                <option value="Mechanical Engineering">Mechanical Engineering</option>
+                <option value="Civil Engineering">Civil Engineering</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="year">Academic Year:</label>
+              <select id="year" name="year" class="filter-select" required>
+                <option value="">-- Select Year --</option>
+                <option value="1st Year (Semester 1/2)">1st Year (Semester 1/2)</option>
+                <option value="2nd Year (Semester 3/4)">2nd Year (Semester 3/4)</option>
+                <option value="3rd Year (Semester 5/6)">3rd Year (Semester 5/6)</option>
+                <option value="4th Year (Semester 7/8)">4th Year (Semester 7/8)</option>
+              </select>
+            </div>
           </div>
 
           <div class="form-group">
-            <label for="password">Create Password:</label>
-            <input type="password" id="password" name="password" required autocomplete="new-password" placeholder="Minimum 8 characters">
+            <label>Gender:</label>
+            <div class="radio-group">
+              <label class="radio-label">
+                <input type="radio" name="gender" value="Male" checked required>
+                <span>Male</span>
+              </label>
+              <label class="radio-label">
+                <input type="radio" name="gender" value="Female">
+                <span>Female</span>
+              </label>
+              <label class="radio-label">
+                <input type="radio" name="gender" value="Other">
+                <span>Other</span>
+              </label>
+            </div>
           </div>
 
-          <div class="form-group">
-            <label for="confirm-password">Confirm Password:</label>
-            <input type="password" id="confirm-password" name="confirm-password" required placeholder="Re-enter password to match">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="password">Create Password:</label>
+              <input 
+                type="password" 
+                id="password" 
+                name="password" 
+                required 
+                autocomplete="new-password" 
+                placeholder="Enter password"
+              >
+            </div>
+
+            <div class="form-group">
+              <label for="confirm_password">Confirm Password:</label>
+              <input 
+                type="password" 
+                id="confirm_password" 
+                name="confirm_password" 
+                required 
+                placeholder="Confirm password"
+              >
+            </div>
           </div>
 
-          <button type="submit" class="btn btn-primary" style="width: 100%; padding: 12px; font-size: 1rem; margin-top: 10px;">
+          <label class="checkbox-label">
+            <input type="checkbox" name="terms" value="1" required checked>
+            <span>I agree to the <strong>StudentHub Academic Terms</strong> and university guidelines.</span>
+          </label>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%; padding: 12px; font-size: 1rem; margin-top: 16px;">
             📝 Complete Registration
           </button>
         </fieldset>
@@ -66,7 +212,7 @@
 
       <div class="auth-footer-links">
         <p>Already registered? <a href="./login.html">Sign in to your account here &rarr;</a></p>
-        <p style="margin-top: 6px;"><a href="./home.html">Or browse Guest Portal Demo &rarr;</a></p>
+        <p style="margin-top: 6px;"><a href="./home.html">Or return to Home &rarr;</a></p>
       </div>
     </div>
   </main>

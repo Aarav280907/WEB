@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function () {
     } else {
       greetingText = 'Good evening';
     }
-    greetingElement.textContent = `${greetingText}, Aarav!`;
+    greetingElement.textContent = `${greetingText}!`;
   }
 
   // 10. Dynamic Notification Demo Buttons
