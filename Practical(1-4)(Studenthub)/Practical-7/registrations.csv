@@ -1,1 +1,4 @@
 id,fullname,student_id,email,mobile,course,year,gender,registration_date
+1,"Aarav Patel",25DCE072,aarav.patel@charusat.edu.in,9876543210,"Computer Engineering","2nd Year (Semester 3/4)",Male,"2026-10-19 06:00:26"
+2,"Riya Shah",25DIT034,riya.shah@charusat.edu.in,9876543210,"Computer Engineering","2nd Year (Semester 3/4)",Male,"2026-10-19 06:00:28"
+3,"Karan Mehta",25DAI011,karan.mehta@charusat.edu.in,9876543210,"Computer Engineering","2nd Year (Semester 3/4)",Male,"2026-10-19 06:00:29"

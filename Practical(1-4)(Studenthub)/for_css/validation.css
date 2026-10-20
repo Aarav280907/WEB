@@ -1,0 +1,99 @@
+/* ==========================================================================
+   StudentHub - Form Validation Styles (Practical 5)
+   ========================================================================== */
+
+.field-error {
+  display: block;
+  min-height: 0;
+  margin-top: 5px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--danger-text);
+}
+.field-error:empty { display: none; }
+.field-error::before { content: "⚠ "; }
+
+.form-group.has-error input[type="text"],
+.form-group.has-error input[type="email"],
+.form-group.has-error input[type="tel"],
+.form-group.has-error input[type="password"],
+.form-group.has-error select {
+  border-color: var(--danger);
+  background-color: var(--danger-bg);
+}
+.form-group.is-valid input[type="text"],
+.form-group.is-valid input[type="email"],
+.form-group.is-valid input[type="tel"],
+.form-group.is-valid input[type="password"],
+.form-group.is-valid select {
+  border-color: var(--success);
+}
+body.dark-theme .form-group.has-error input,
+body.dark-theme .form-group.has-error select { background-color: rgba(239, 68, 68, 0.12); }
+
+/* the phone field was not covered by the generic "form input" rule in common.css */
+form input[type="tel"] {
+  width: 100%;
+  padding: 11px 14px;
+  background-color: var(--bg-surface);
+  color: var(--text-main);
+  border: 1.5px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  font-size: 0.95rem;
+  font-family: inherit;
+}
+form input[type="tel"]:focus {
+  border-color: var(--border-focus);
+  outline: none;
+  box-shadow: 0 0 0 4px var(--primary-glow);
+}
+
+/* Password strength meter */
+.strength-track {
+  height: 8px;
+  margin-top: 8px;
+  background: var(--bg-subsurface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+.strength-bar {
+  height: 100%;
+  width: 0;
+  transition: width 0.3s ease, background-color 0.3s ease;
+}
+.strength-bar.strength-0 { background: #ef4444; }
+.strength-bar.strength-1 { background: #f97316; }
+.strength-bar.strength-2 { background: #f59e0b; }
+.strength-bar.strength-3 { background: #84cc16; }
+.strength-bar.strength-4 { background: #10b981; }
+.strength-text { display: block; margin-top: 4px; font-size: 0.78rem; color: var(--text-muted); }
+
+/* CAPTCHA */
+.captcha-row { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 8px; }
+#captcha-canvas { border: 1.5px solid var(--border-color); border-radius: var(--radius-sm); background: #ecfdf5; }
+.captcha-refresh {
+  background: var(--bg-subsurface) !important;
+  color: var(--text-main) !important;
+  border: 1px solid var(--border-color) !important;
+  box-shadow: none !important;
+}
+
+.form-summary { margin-top: 14px; padding: 0; font-size: 0.88rem; font-weight: 600; border-radius: var(--radius-sm); }
+.form-summary:empty { display: none; }
+.form-summary.summary-error { padding: 10px 14px; background: var(--danger-bg); color: var(--danger-text); border: 1px solid var(--danger-border); }
+.form-summary.summary-ok { padding: 10px 14px; background: var(--success-bg); color: var(--success-text); border: 1px solid var(--success-border); }
+
+.link-button {
+  background: none !important; color: var(--primary) !important; box-shadow: none !important;
+  padding: 0 !important; font-size: 0.85rem !important; text-decoration: underline; border: none !important;
+}
+
+/* layout helpers shared by signup.html and the PHP register page */
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+@media (max-width: 600px) { .form-row { grid-template-columns: 1fr; } }
+.radio-group { display: flex; align-items: center; gap: 18px; margin-top: 6px; }
+.radio-label { display: inline-flex !important; align-items: center; gap: 6px; font-size: 0.9rem; cursor: pointer; color: var(--text-main); font-weight: 500 !important; }
+.checkbox-label { display: flex !important; align-items: flex-start; gap: 10px; font-size: 0.88rem; cursor: pointer; color: var(--text-muted); margin-top: 12px; line-height: 1.4; font-weight: 400 !important; }
+.checkbox-label input[type="checkbox"] { margin-top: 3px; cursor: pointer; width: auto; }
+.radio-label input[type="radio"] { width: auto; }

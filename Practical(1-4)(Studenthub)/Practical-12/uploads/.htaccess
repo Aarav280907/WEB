@@ -1,0 +1,8 @@
+# Practical 12 - upload directory protection.
+# Uploaded files must never be executed as code, whatever their name says.
+<FilesMatch "\.(php|phtml|php[0-9]|phar|pl|py|cgi|sh|html?|js)$">
+  Require all denied
+</FilesMatch>
+php_flag engine off
+Options -Indexes -ExecCGI
+AddType text/plain .php .phtml

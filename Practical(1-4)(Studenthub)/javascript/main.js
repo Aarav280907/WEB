@@ -10,6 +10,7 @@
  * 7. Dynamic Greeting and Live Time Utility
  * 8. Dynamic Campus Events & Circulars (events.json)
  * 9. Dynamic Student Directory & Profiles (students.json)
+ * 10. Registration Form Validation (validation.js)
  */
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -53,7 +54,12 @@ document.addEventListener('DOMContentLoaded', function () {
     window.StudentHubStudents.init();
   }
 
-  // 9. Dynamic Student Greeting
+  // 9. Registration Form Validation (Practical 5)
+  if (window.StudentHubValidation && typeof window.StudentHubValidation.init === 'function') {
+    window.StudentHubValidation.init();
+  }
+
+  // 10. Dynamic Student Greeting
   const greetingElement = document.getElementById('dynamic-greeting');
   if (greetingElement) {
     const currentHour = new Date().getHours();
@@ -68,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function () {
     greetingElement.textContent = `${greetingText}!`;
   }
 
-  // 10. Dynamic Notification Demo Buttons
+  // 11. Dynamic Notification Demo Buttons
   const alertDemoBtn = document.getElementById('trigger-alert-btn');
   if (alertDemoBtn) {
     alertDemoBtn.addEventListener('click', function () {

@@ -1,1 +1,35 @@
-[]
+[
+    {
+        "id": 1,
+        "fullname": "Aarav Patel",
+        "student_id": "25DCE072",
+        "email": "aarav.patel@charusat.edu.in",
+        "mobile": "9876543210",
+        "course": "Computer Engineering",
+        "year": "2nd Year (Semester 3/4)",
+        "gender": "Male",
+        "registration_date": "2026-10-19 06:00:26"
+    },
+    {
+        "id": 2,
+        "fullname": "Riya Shah",
+        "student_id": "25DIT034",
+        "email": "riya.shah@charusat.edu.in",
+        "mobile": "9876543210",
+        "course": "Computer Engineering",
+        "year": "2nd Year (Semester 3/4)",
+        "gender": "Male",
+        "registration_date": "2026-10-19 06:00:28"
+    },
+    {
+        "id": 3,
+        "fullname": "Karan Mehta",
+        "student_id": "25DAI011",
+        "email": "karan.mehta@charusat.edu.in",
+        "mobile": "9876543210",
+        "course": "Computer Engineering",
+        "year": "2nd Year (Semester 3/4)",
+        "gender": "Male",
+        "registration_date": "2026-10-19 06:00:29"
+    }
+]

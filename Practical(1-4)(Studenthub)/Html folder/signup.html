@@ -7,6 +7,7 @@
   <link rel="icon" type="image/svg+xml" href="../for_css/extra/favicon.svg">
   <link rel="stylesheet" href="../for_css/common.css">
   <link rel="stylesheet" href="../for_css/signup.css">
+  <link rel="stylesheet" href="../for_css/validation.css">
   <style>
     .form-row {
       display: grid;
@@ -75,59 +76,34 @@
         <p>Register with your university roll number to access the student portal</p>
       </div>
 
-      <form action="../Practical-7/process_signup.php" method="POST" class="auth-form">
+      <form action="../Practical-7/process_signup.php" method="POST" class="auth-form" id="registration-form" novalidate>
         <fieldset style="border: none; padding: 0; margin: 0;">
           <legend style="display: none;">Student Registration Form</legend>
 
           <div class="form-group">
             <label for="fullname">Full Name:</label>
-            <input 
-              type="text" 
-              id="fullname" 
-              name="fullname" 
-              required 
-              placeholder="Enter full name" 
-              autocomplete="name"
-            >
+            <input type="text" id="fullname" name="fullname" required placeholder="Enter full name" autocomplete="name" minlength="3" maxlength="60">
+            <span class="field-error" id="fullname-error" role="alert"></span>
           </div>
 
           <div class="form-row">
             <div class="form-group">
               <label for="student_id">Student ID / Roll Number:</label>
-              <input 
-                type="text" 
-                id="student_id" 
-                name="student_id" 
-                required 
-                placeholder="Enter student ID" 
-                autocomplete="username"
-              >
+              <input type="text" id="student_id" name="student_id" required placeholder="e.g. 25DCE072" autocomplete="username" maxlength="15">
+              <span class="field-error" id="student_id-error" role="alert"></span>
             </div>
 
             <div class="form-group">
               <label for="mobile">Mobile Number (10 Digits):</label>
-              <input 
-                type="tel" 
-                id="mobile" 
-                name="mobile" 
-                required 
-                placeholder="Enter mobile number" 
-                autocomplete="tel"
-                maxlength="10"
-              >
+              <input type="tel" id="mobile" name="mobile" required placeholder="Enter mobile number" autocomplete="tel" inputmode="numeric" maxlength="10">
+              <span class="field-error" id="mobile-error" role="alert"></span>
             </div>
           </div>
 
           <div class="form-group">
             <label for="email">University Email Address:</label>
-            <input 
-              type="email" 
-              id="email" 
-              name="email" 
-              required 
-              placeholder="Enter email address" 
-              autocomplete="email"
-            >
+            <input type="email" id="email" name="email" required placeholder="name@charusat.edu.in" autocomplete="email">
+            <span class="field-error" id="email-error" role="alert"></span>
           </div>
 
           <div class="form-row">
@@ -142,6 +118,7 @@
                 <option value="Mechanical Engineering">Mechanical Engineering</option>
                 <option value="Civil Engineering">Civil Engineering</option>
               </select>
+              <span class="field-error" id="course-error" role="alert"></span>
             </div>
 
             <div class="form-group">
@@ -153,56 +130,56 @@
                 <option value="3rd Year (Semester 5/6)">3rd Year (Semester 5/6)</option>
                 <option value="4th Year (Semester 7/8)">4th Year (Semester 7/8)</option>
               </select>
+              <span class="field-error" id="year-error" role="alert"></span>
             </div>
           </div>
 
-          <div class="form-group">
-            <label>Gender:</label>
+          <div class="form-group" role="radiogroup" aria-labelledby="gender-label">
+            <label id="gender-label">Gender:</label>
             <div class="radio-group">
-              <label class="radio-label">
-                <input type="radio" name="gender" value="Male" checked required>
-                <span>Male</span>
-              </label>
-              <label class="radio-label">
-                <input type="radio" name="gender" value="Female">
-                <span>Female</span>
-              </label>
-              <label class="radio-label">
-                <input type="radio" name="gender" value="Other">
-                <span>Other</span>
-              </label>
+              <label class="radio-label"><input type="radio" name="gender" value="Male" required> <span>Male</span></label>
+              <label class="radio-label"><input type="radio" name="gender" value="Female"> <span>Female</span></label>
+              <label class="radio-label"><input type="radio" name="gender" value="Other"> <span>Other</span></label>
             </div>
+            <span class="field-error" id="gender-error" role="alert"></span>
           </div>
 
           <div class="form-row">
             <div class="form-group">
               <label for="password">Create Password:</label>
-              <input 
-                type="password" 
-                id="password" 
-                name="password" 
-                required 
-                autocomplete="new-password" 
-                placeholder="Enter password"
-              >
+              <input type="password" id="password" name="password" required autocomplete="new-password" placeholder="Min 8 chars, Aa + 1-9" minlength="8">
+              <div class="strength-track" aria-hidden="true"><div id="strength-bar" class="strength-bar"></div></div>
+              <span class="strength-text" id="strength-text" aria-live="polite">Password strength: —</span>
+              <span class="field-error" id="password-error" role="alert"></span>
             </div>
 
             <div class="form-group">
               <label for="confirm_password">Confirm Password:</label>
-              <input 
-                type="password" 
-                id="confirm_password" 
-                name="confirm_password" 
-                required 
-                placeholder="Confirm password"
-              >
+              <input type="password" id="confirm_password" name="confirm_password" required autocomplete="new-password" placeholder="Confirm password">
+              <span class="field-error" id="confirm_password-error" role="alert"></span>
             </div>
           </div>
+          <p style="margin: -8px 0 14px;"><button type="button" id="toggle-password" class="link-button" aria-pressed="false">Show passwords</button></p>
 
-          <label class="checkbox-label">
-            <input type="checkbox" name="terms" value="1" required checked>
-            <span>I agree to the <strong>StudentHub Academic Terms</strong> and university guidelines.</span>
-          </label>
+          <div class="form-group">
+            <label for="captcha">Verification (CAPTCHA):</label>
+            <div class="captcha-row">
+              <canvas id="captcha-canvas" width="150" height="48" role="img" aria-label="CAPTCHA image: type the 5 characters shown"></canvas>
+              <button type="button" id="captcha-refresh" class="captcha-refresh btn-sm" aria-label="Load a new CAPTCHA image">↻ New image</button>
+            </div>
+            <input type="text" id="captcha" name="captcha" autocomplete="off" placeholder="Type the characters above" maxlength="5">
+            <span class="field-error" id="captcha-error" role="alert"></span>
+          </div>
+
+          <div class="form-group" style="margin-bottom: 0;">
+            <label class="checkbox-label">
+              <input type="checkbox" name="terms" value="1" required>
+              <span>I agree to the <strong>StudentHub Academic Terms</strong> and university guidelines.</span>
+            </label>
+            <span class="field-error" id="terms-error" role="alert"></span>
+          </div>
+
+          <div id="form-summary" class="form-summary" role="status" aria-live="polite"></div>
 
           <button type="submit" class="btn btn-primary" style="width: 100%; padding: 12px; font-size: 1rem; margin-top: 16px;">
             📝 Complete Registration
@@ -229,6 +206,7 @@
   <script src="../javascript/faq.js"></script>
   <script src="../javascript/modal.js"></script>
   <script src="../javascript/slider.js"></script>
+  <script src="../javascript/validation.js"></script>
   <script src="../javascript/main.js"></script>
 </body>
 </html>
