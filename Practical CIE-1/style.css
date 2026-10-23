@@ -108,7 +108,7 @@ form > section {
 
 #comments {
   min-height: 130px;
-  resize: vertical;
+  resize: horizontal;
   overflow-wrap: anywhere;
 }
 
@@ -126,12 +126,12 @@ legend {
 }
 
 fieldset input[type="radio"] {
-  margin-left: 10px;
+  margin-inline: 10px;
   accent-color: #075985;
 }
 
 fieldset label {
-  display: inline;
+    display: inline-block;
   margin: 0 8px 0 3px;
   color: #24364b;
 }
