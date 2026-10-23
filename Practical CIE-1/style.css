@@ -1,0 +1,278 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 24px;
+  background-color: #f2f5f9;
+  color: #1f2937;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+header,
+main,
+footer {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+header,
+footer {
+  text-align: center;
+}
+
+header {
+  padding: 20px;
+}
+
+main {
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.08);
+}
+
+h1,
+h2,
+legend {
+  color: #123b66;
+  line-height: 1.25;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
+}
+
+label,
+legend {
+  font-weight: 700;
+}
+
+input,
+textarea,
+button {
+  font: inherit;
+}
+
+.card {
+  position: relative;
+  min-height: 100px;
+  margin: 18px 0;
+  padding: 20px;
+  background-color: #f8fafc;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+}
+
+form section {
+  margin-bottom: 20px;
+}
+
+form section label {
+  display: block;
+  margin: 12px 0 6px;
+}
+
+form > section {
+  padding: 16px;
+  background-color: #f8fafc;
+  border: 1px solid #d6e0eb;
+  border-radius: 10px;
+}
+
+/* ID selectors */
+#studentName,
+#courseName,
+#facultyName,
+#comments {
+  display: block;
+  width: 100%;
+  min-height: 44px;
+  padding: 10px 12px;
+  color: #172033;
+  background-color: #ffffff;
+  border: 1px solid #64748b;
+  border-radius: 6px;
+}
+
+#comments {
+  min-height: 130px;
+  resize: vertical;
+  overflow-wrap: anywhere;
+}
+
+/* Rating controls */
+fieldset {
+  margin: 16px 0;
+  padding: 14px;
+  border: 1px solid #94a3b8;
+  border-radius: 8px;
+}
+
+legend {
+  padding: 0 6px;
+  font-size: 1.05rem;
+}
+
+fieldset input[type="radio"] {
+  margin-left: 10px;
+  accent-color: #075985;
+}
+
+fieldset label {
+  display: inline;
+  margin: 0 8px 0 3px;
+  color: #24364b;
+}
+
+/* Badge with relative positioning */
+.badge {
+  position: relative;
+  display: inline-block;
+  margin: 8px 0;
+  padding: 4px 10px;
+  color: #ffffff;
+  background-color: #075985;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+/* Recommendations are hidden before submission.
+   Add the .visible class after submission to display them. */
+#recommendations {
+  display: none;
+  min-height: 60px;
+  margin: 16px 0;
+  padding: 16px;
+  color: #173b2b;
+  background-color: #ecfdf3;
+  border: 1px solid #86c99d;
+  border-radius: 8px;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+#recommendations.visible {
+  display: block;
+}
+
+#feedbackSummary {
+  min-height: 40px;
+  margin: 16px 0;
+  padding: 12px;
+  background-color: #eef6ff;
+  border-left: 4px solid #075985;
+  border-radius: 4px;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+#feedbackSummary p,
+#recommendations p {
+  margin: 0 0 10px;
+}
+
+#feedbackSummary p:last-child,
+#recommendations p:last-child {
+  margin-bottom: 0;
+}
+
+/* Interactive states */
+input:focus,
+textarea:focus {
+  outline: 3px solid #93c5fd;
+  outline-offset: 2px;
+  border-color: #075985;
+}
+
+button {
+  min-height: 44px;
+  margin: 6px 8px 6px 0;
+  padding: 10px 18px;
+  color: #ffffff;
+  background-color: #075985;
+  border: 2px solid #075985;
+  border-radius: 6px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:hover,
+button:focus {
+  background-color: #123b66;
+  border-color: #123b66;
+}
+
+button:focus {
+  outline: 3px solid #93c5fd;
+  outline-offset: 2px;
+}
+
+button[type="reset"] {
+  color: #123b66;
+  background-color: #ffffff;
+}
+
+button[type="reset"]:hover,
+button[type="reset"]:focus {
+  color: #ffffff;
+  background-color: #334155;
+  border-color: #334155;
+}
+
+footer {
+  padding: 18px;
+  color: #334155;
+}
+
+/* Responsive layout */
+@media (max-width: 600px) {
+  body {
+    padding: 12px;
+  }
+
+  header {
+    padding: 16px 8px;
+  }
+
+  h1 {
+    font-size: 1.65rem;
+  }
+
+  main {
+    padding: 16px;
+  }
+
+  form > section {
+    padding: 12px;
+  }
+
+  fieldset {
+    padding: 10px;
+  }
+
+  fieldset input[type="radio"] {
+    margin-left: 4px;
+  }
+
+  fieldset label {
+    margin-right: 4px;
+  }
+
+  button {
+    width: 100%;
+    margin-right: 0;
+  }
+}
